@@ -7,27 +7,44 @@ class CTIChunker:
         
     def chunk_event(self, event: CTIEvent) -> List[Dict[str, Any]]:
         chunks = []
-        # Base metadata text injects context into every chunk
-        base_text = f"Report or Malware Info: {event.info} | Date: {event.date} | Event ID: {event.id}\nIndicators:"
         
+        # Representation B: Narrative Event
+        narrative_chunk = {
+            "event_id": event.event_id,
+            "source_file": event.source_file,
+            "event_type": event.event_type,
+            "report_year": event.report_year,
+            "date": event.date,
+            "info": event.info,
+            "chunk_type": "narrative",
+            "chunk_index": 0,
+            "text": event.narrative
+        }
+        chunks.append(narrative_chunk)
+        
+        # Representation A: Raw Event
         if not event.attributes:
             return chunks
 
-        # Split attributes into semantic batches
         for i in range(0, len(event.attributes), self.batch_size):
             batch = event.attributes[i:i + self.batch_size]
-            chunk_text = base_text + "\n"
+            
+            chunk_text = f"Raw IOCs for {event.event_type} {event.event_id} ({event.info}):\n"
             for attr in batch:
                 comment_str = f" (Comment: {attr.comment})" if attr.comment else ""
                 chunk_text += f"- [{attr.category}] {attr.type}: {attr.value}{comment_str}\n"
             
-            chunk_meta = {
-                "event_id": event.id,
+            ioc_chunk = {
+                "event_id": event.event_id,
+                "source_file": event.source_file,
+                "event_type": event.event_type,
+                "report_year": event.report_year,
                 "date": event.date,
                 "info": event.info,
-                "chunk_index": i // self.batch_size,
+                "chunk_type": "ioc_raw",
+                "chunk_index": (i // self.batch_size) + 1,
                 "text": chunk_text
             }
-            chunks.append(chunk_meta)
+            chunks.append(ioc_chunk)
             
         return chunks

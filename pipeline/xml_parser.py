@@ -1,3 +1,4 @@
+import os
 import xml.etree.ElementTree as ET
 from schemas.cti_schema import CTIEvent, CTIAttribute
 
@@ -6,8 +7,20 @@ def parse_xml_file(filepath: str) -> list[CTIEvent]:
     tree = ET.parse(filepath)
     root = tree.getroot()
     
+    filename = os.path.basename(filepath)
+    
+    event_type = "Unknown"
+    report_year = 0
+    parts = filename.split('_')
+    if len(parts) >= 3:
+        try:
+            report_year = int(parts[1])
+        except ValueError:
+            pass
+        event_type = parts[2].replace(".xml", "")
+    
     for event_elem in root.findall('Event'):
-        event_id = int(event_elem.findtext('id'))
+        event_id = int(event_elem.findtext('id', '0'))
         date = event_elem.findtext('date', '')
         info = event_elem.findtext('info', '')
         
@@ -30,7 +43,10 @@ def parse_xml_file(filepath: str) -> list[CTIEvent]:
             attributes.append(attr)
             
         event = CTIEvent(
-            id=event_id,
+            event_id=event_id,
+            source_file=filename,
+            event_type=event_type,
+            report_year=report_year,
             date=date,
             info=info,
             attributes=attributes

@@ -4,7 +4,10 @@ from pipeline.chunker import CTIChunker
 
 def test_pydantic_schema():
     event_data = {
-        "id": 1,
+        "event_id": 1,
+        "source_file": "CTIDataset_2019_ReportEvent.xml",
+        "event_type": "ReportEvent",
+        "report_year": 2019,
         "date": "2019-01-01",
         "info": "test_report.pdf",
         "attributes": [
@@ -12,12 +15,15 @@ def test_pydantic_schema():
         ]
     }
     event = CTIEvent(**event_data)
-    assert event.id == 1
+    assert event.event_id == 1
     assert event.attributes[0].value == "1.1.1.1"
 
 def test_chunker_logic():
     event = CTIEvent(
-        id=2, 
+        event_id=2, 
+        source_file="CTIDataset_2020_MalwareEvent.xml",
+        event_type="MalwareEvent",
+        report_year=2020,
         date="2020-01-01", 
         info="malware.pdf", 
         attributes=[
@@ -28,11 +34,13 @@ def test_chunker_logic():
     chunker = CTIChunker(batch_size=20)
     chunks = chunker.chunk_event(event)
     
-    # 45 attributes with batch size 20 should yield 3 chunks (20, 20, 5)
-    assert len(chunks) == 3
+    assert len(chunks) == 4
+    assert chunks[0]["chunk_type"] == "narrative"
     assert chunks[0]["chunk_index"] == 0
+    
+    assert chunks[1]["chunk_type"] == "ioc_raw"
     assert chunks[1]["chunk_index"] == 1
     assert chunks[2]["chunk_index"] == 2
+    assert chunks[3]["chunk_index"] == 3
     
-    # Ensure metadata is injected into the text
-    assert "Report or Malware Info: malware.pdf" in chunks[0]["text"]
+    assert "CTI Malware from 2020 titled 'malware.pdf'" in chunks[0]["text"]

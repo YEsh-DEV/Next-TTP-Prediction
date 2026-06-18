@@ -14,7 +14,16 @@ class ChromaManager:
             
         ids = [f"evt_{c['event_id']}_chunk_{c['chunk_index']}" for c in chunks]
         documents = [c['text'] for c in chunks]
-        metadatas = [{"event_id": c["event_id"], "date": c["date"], "info": c["info"], "chunk_index": c["chunk_index"]} for c in chunks]
+        metadatas = [{
+            "event_id": c["event_id"], 
+            "source_file": c["source_file"],
+            "event_type": c["event_type"],
+            "report_year": c["report_year"],
+            "date": c["date"], 
+            "info": c["info"], 
+            "chunk_type": c["chunk_type"],
+            "chunk_index": c["chunk_index"]
+        } for c in chunks]
         
         self.collection.upsert(
             ids=ids,
