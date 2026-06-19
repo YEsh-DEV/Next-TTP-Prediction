@@ -1,63 +1,81 @@
 from enum import Enum
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 
 class EntityType(str, Enum):
     THREAT_ACTOR = "ThreatActor"
+    CAMPAIGN = "Campaign"
     MALWARE = "Malware"
     TOOL = "Tool"
-    TECHNIQUE = "Technique"
-    TACTIC = "Tactic"
     VICTIM = "Victim"
     INFRASTRUCTURE = "Infrastructure"
     VULNERABILITY = "Vulnerability"
-    CAMPAIGN = "Campaign"
-    ORGANIZATION = "Organization"
     FILE_ARTIFACT = "FileArtifact"
+    TACTIC = "Tactic"
+    TECHNIQUE = "Technique"
 
 class RelationshipType(str, Enum):
-    USES = "USES"
-    EMPLOYS_TECHNIQUE = "EMPLOYS_TECHNIQUE"
-    TARGETS = "TARGETS"
-    EXPLOITS = "EXPLOITS"
-    COMMUNICATES_WITH = "COMMUNICATES_WITH"
-    PARTICIPATED_IN = "PARTICIPATED_IN"
-    CO_OCCURS_WITH = "CO_OCCURS_WITH"
-    PRECEDES = "PRECEDES"
+    USES = "USES"                          # Actor/Malware USES Tool/Technique
+    TARGETS = "TARGETS"                    # Actor/Malware TARGETS Victim/Infrastructure
+    EXPLOITS = "EXPLOITS"                  # Malware/Actor EXPLOITS Vulnerability
+    COMMUNICATES_WITH = "COMMUNICATES_WITH"# Malware/Infrastructure COMMUNICATES_WITH Infrastructure
+    PARTICIPATED_IN = "PARTICIPATED_IN"    # Actor PARTICIPATED_IN Campaign
+    ASSOCIATED_WITH = "ASSOCIATED_WITH"    # Generic association
+    DROPPED = "DROPPED"                    # Event/Malware DROPPED File_Artifact
+    INDICATES = "INDICATES"                # File/IP INDICATES Malware/Actor
+    SUBTECHNIQUE_OF = "SUBTECHNIQUE_OF"    # Technique SUBTECHNIQUE_OF parent Technique
+
+class TemporalCausalType(str, Enum):
+    PRECEDES = "PRECEDES"                  # Event A is chronologically before Event B
+    CAUSES = "CAUSES"                      # Event A logically/physically causes Event B to happen
+    TRIGGERS = "TRIGGERS"                  # Event A triggers automated/instant execution of Event B
 
 class Metadata(BaseModel):
     source_file: str = Field(..., description="The source XML filename")
-    report_date: str = Field(..., description="Date of the report/event")
+    report_date: Optional[str] = Field(None, description="Absolute date/time of the report or events if known (ISO 8601)")
+    extraction_timestamp: str = Field(..., description="Timestamp of when extraction was executed")
 
 class Entity(BaseModel):
-    entity_id: str = Field(..., description="Unique ID for this entity within the extraction (e.g., 'ent_1')")
-    type: EntityType = Field(..., description="The type of entity, constrained to the specific enum")
-    value: str = Field(..., description="The name or value of the entity (e.g., 'Patchwork', 'PowerShell')")
+    entity_id: str = Field(..., description="Unique alphanumeric ID (e.g., 'ent_01', 'ent_02')")
+    type: EntityType = Field(..., description="Type of entity classification")
+    value: str = Field(..., description="Canonical name or identifier of the entity (e.g., 'APT41', 'Mimikatz', 'CVE-2020-0601')")
+    aliases: List[str] = Field(default_factory=list, description="Alternative names discovered in the text")
+    description: Optional[str] = Field(None, description="Short context description from the report text")
 
 class Event(BaseModel):
-    event_id: str = Field(..., description="Unique ID for this event within the extraction (e.g., 'evt_1')")
-    action: str = Field(..., description="A meaningful attack action (e.g., 'PowerShell Execution')")
-    entities: List[str] = Field(default_factory=list, description="List of entity_ids involved in this event")
+    event_id: str = Field(..., description="Unique event identifier (e.g., 'evt_01')")
+    action: str = Field(..., description="Core cyber attack action/behavior (e.g., 'LSASS Memory Dump', 'C2 Domain Beaconing')")
+    timestamp: Optional[str] = Field(None, description="Absolute or relative timestamp of the event (ISO 8601 or offsets like 'T+12m')")
+    sequence_number: int = Field(..., description="Chronological ordering index of the event, starting at 1")
+    actor_id: Optional[str] = Field(None, description="The entity_id of the entity executing the action (e.g., ThreatActor or Malware)")
+    target_ids: List[str] = Field(default_factory=list, description="List of entity_ids representing the targets of this action")
+    mitre_technique_id: Optional[str] = Field(None, description="Standard MITRE Technique ID mapped to this event (e.g., 'T1003.001')")
+    description: str = Field(..., description="Detailed description of what occurred during this event")
 
 class Relationship(BaseModel):
-    source: str = Field(..., description="The ID of the source entity or event")
-    type: RelationshipType = Field(..., description="The relationship type, constrained to the enum")
-    target: str = Field(..., description="The ID of the target entity or event")
-    confidence: float = Field(..., description="A confidence score between 0.0 and 1.0", ge=0.0, le=1.0)
+    relationship_id: str = Field(..., description="Unique relationship identifier (e.g., 'rel_01')")
+    source_id: str = Field(..., description="The ID of the source entity or event")
+    target_id: str = Field(..., description="The ID of the target entity or event")
+    type: RelationshipType = Field(..., description="Relationship type enum")
+    confidence: float = Field(..., description="Confidence score from 0.0 to 1.0 based on text clarity", ge=0.0, le=1.0)
 
-class MitreCandidate(BaseModel):
-    entity_id: str = Field(..., description="The ID of the entity this maps to")
-    suggested_technique: str = Field(..., description="The MITRE ATT&CK Technique ID (e.g., 'T1059')")
-    reasoning: str = Field(..., description="Brief reasoning for this mapping")
+class TemporalCausalEdge(BaseModel):
+    edge_id: str = Field(..., description="Unique edge identifier (e.g., 'tc_01')")
+    source_event_id: str = Field(..., description="The event_id of the cause/predecessor event")
+    target_event_id: str = Field(..., description="The event_id of the effect/successor event")
+    type: TemporalCausalType = Field(..., description="The temporal/causal relationship between events")
+    time_delta: Optional[str] = Field(None, description="Time difference description if explicitly stated (e.g., '10 minutes later', 'immediately')")
+    confidence: float = Field(..., description="Confidence score from 0.0 to 1.0", ge=0.0, le=1.0)
 
 class Evidence(BaseModel):
-    target_id: str = Field(..., description="The ID of the entity, event, or relationship this evidence supports")
-    text_snippet: str = Field(..., description="The exact text snippet from the chunk")
+    evidence_id: str = Field(..., description="Unique evidence ID (e.g., 'ev_01')")
+    target_id: str = Field(..., description="The ID of the entity, event, relationship, or temporal edge this evidence supports")
+    text_snippet: str = Field(..., description="The EXACT verbatim text quotation from the report justifying the element")
 
 class ExtractionResult(BaseModel):
     metadata: Metadata
     entities: List[Entity] = Field(default_factory=list)
     events: List[Event] = Field(default_factory=list)
     relationships: List[Relationship] = Field(default_factory=list)
-    mitre_candidates: List[MitreCandidate] = Field(default_factory=list)
+    temporal_causal_edges: List[TemporalCausalEdge] = Field(default_factory=list)
     evidence: List[Evidence] = Field(default_factory=list)
