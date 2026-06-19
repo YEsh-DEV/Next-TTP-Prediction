@@ -1,5 +1,14 @@
 import os
 import json
+import warnings
+
+warnings.warn(
+    "Extractor is DEPRECATED. Phase-3 has been architecturally reassessed to use deterministic "
+    "rule-based MITRE mapping via mitre_mapper.py, as the raw dataset is a structured MISP feed "
+    "and not unstructured narrative text.",
+    DeprecationWarning,
+    stacklevel=2
+)
 from typing import Optional
 from google import genai
 from google.genai import types

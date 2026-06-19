@@ -46,8 +46,8 @@ def run_ingestion(limit_files=None):
     print(f"Found {len(xml_files)} total files. {len(files_to_process)} remaining to process.")
     
     if limit_files is not None:
-        files_to_process = files_to_process[:limit_files]
-        print(f"Limiting to {limit_files} files for trial run.")
+        target_file = "CTIDataset_2018_ReportEvent.xml"
+        files_to_process = [f for f in files_to_process if os.path.basename(f) == target_file]
 
     for filepath in files_to_process:
         filename = os.path.basename(filepath)
