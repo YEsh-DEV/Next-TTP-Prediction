@@ -38,7 +38,7 @@ class CTIValidationError(ValueError):
 
 class Extractor:
     def __init__(self, api_key: Optional[str] = None):
-        self.api_key = api_key or os.environ.get("GEMINI_API_KEY")
+        self.api_key = api_key or os.environ.get("GEMINI_AUTH_API_KEY") or os.environ.get("GEMINI_API_KEY")
         if self.api_key:
             self.client = genai.Client(api_key=self.api_key)
         else:

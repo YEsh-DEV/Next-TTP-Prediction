@@ -20,10 +20,8 @@ class RelationshipType(str, Enum):
     EXPLOITS = "EXPLOITS"                  # Malware/Actor EXPLOITS Vulnerability
     COMMUNICATES_WITH = "COMMUNICATES_WITH"# Malware/Infrastructure COMMUNICATES_WITH Infrastructure
     PARTICIPATED_IN = "PARTICIPATED_IN"    # Actor PARTICIPATED_IN Campaign
-    ASSOCIATED_WITH = "ASSOCIATED_WITH"    # Generic association
-    DROPPED = "DROPPED"                    # Event/Malware DROPPED File_Artifact
-    INDICATES = "INDICATES"                # File/IP INDICATES Malware/Actor
-    SUBTECHNIQUE_OF = "SUBTECHNIQUE_OF"    # Technique SUBTECHNIQUE_OF parent Technique
+    CO_OCCURS_WITH = "CO_OCCURS_WITH"      # Entities found together without explicit action
+    PRECEDES = "PRECEDES"                  # Event PRECEDES another event (can also be covered by TemporalCausalEdge)
 
 class TemporalCausalType(str, Enum):
     PRECEDES = "PRECEDES"                  # Event A is chronologically before Event B

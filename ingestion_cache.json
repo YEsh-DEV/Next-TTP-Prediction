@@ -2,6 +2,8 @@
     "processed_files": [
         "CTIDataset_2008_MalwareEvent.xml",
         "CTIDataset_2008_ReportEvent.xml",
-        "CTIDataset_2009_MalwareEvent.xml"
+        "CTIDataset_2009_MalwareEvent.xml",
+        "CTIDataset_2009_ReportEvent.xml",
+        "CTIDataset_2010_MalwareEvent.xml"
     ]
 }
