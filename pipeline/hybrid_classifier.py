@@ -83,7 +83,9 @@ Your task is to select the best matching MITRE Techniques and assign a mathemati
                 ),
             )
             result = ClassificationResult.model_validate_json(response.text)
-            return result.techniques
+            import re
+            pattern = re.compile(r"^T[0-9]{4}(\.[0-9]{3})?$")
+            return [t for t in result.techniques if pattern.match(t.technique_id)]
         except Exception as e:
             print(f"Classification failed: {e}")
             return []
