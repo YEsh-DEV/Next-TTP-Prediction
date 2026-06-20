@@ -8,12 +8,14 @@ from schemas.extraction_schema import (
     ExtractionResult, Metadata, Entity, EntityType, 
     Event, Relationship, RelationshipType, Evidence
 )
+from pipeline.hybrid_classifier import HybridClassifier
 
 class MitreMapper:
     def __init__(self, base_dir: str):
         self.base_dir = base_dir
         self.attack_mitre_path = os.path.join(base_dir, "attackmitre.xlsx")
         self.mitre_enterprise_path = os.path.join(base_dir, "MitreEnterprise.xlsx")
+        self.classifier = HybridClassifier(base_dir)
         
         # Load datasets
         try:
@@ -26,20 +28,12 @@ class MitreMapper:
             
         # Standardize columns
         if 'Tactic ID' in self.df_enterprise.columns:
-            # Note: The Excel sheet uses "Tactic ID" but contains Technique IDs (e.g., T1078)
             self.df_enterprise['Tactic ID'] = self.df_enterprise['Tactic ID'].astype(str)
-            
-        # Hardcoded Category -> Technique mapping for deterministic bridging
-        self.category_technique_map = {
-            'Payload delivery': 'T1193', # Spearphishing Attachment (Old ID) or Initial Access
-            'Network activity': 'T1043', # Standard Application Layer Protocol (C2)
-            'Artifacts dropped': 'T1105', # Ingress Tool Transfer
-            'Persistance mechanism': 'T1053' # Scheduled Task/Job
-        }
 
     def map_event(self, cti_event: CTIEvent) -> ExtractionResult:
         """
         Deterministically maps a CTIEvent's attributes and info to an ExtractionResult graph.
+        Uses HybridClassifier to determine techniques.
         """
         timestamp = datetime.utcnow().isoformat() + "Z"
         
@@ -84,12 +78,16 @@ class MitreMapper:
             ev_counter += 1
 
         # 2. Process Attributes (Indicators)
-        mapped_techniques = set()
+        event_indicators = []
         for attr in cti_event.attributes:
             entity_type = None
             
-            if attr.type in ['url', 'ip-src', 'domain']:
-                entity_type = EntityType.INFRASTRUCTURE
+            # GRAPH COMPRESSION: Absorb infrastructure directly into the event property array
+            if attr.type in ['url', 'ip-src', 'domain', 'email-src']:
+                event_indicators.append(f"{attr.type}:{attr.value}")
+                continue
+                
+            # Promote high-value IOCs to permanent Graph Nodes
             elif attr.type in ['filename', 'md5', 'sha1', 'sha256']:
                 entity_type = EntityType.FILE_ARTIFACT
             elif attr.type == 'vulnerability':
@@ -132,34 +130,62 @@ class MitreMapper:
                         confidence=1.0 # Deterministic
                     ))
                     
-            # 3. Map to Techniques
-            tech_id = self.category_technique_map.get(attr.category)
-            if tech_id:
-                mapped_techniques.add(tech_id)
+        # 3. Dynamic MITRE Technique Classification (ChromaDB + Gemini)
+        technique_matches = self.classifier.classify_event(cti_event)
                 
-        # Create a single summary event for the report
+        # 4. Create the core Event Node
         events: List[Event] = []
-        if mapped_techniques or entities:
-            # Lookup first technique description
-            tech_id = list(mapped_techniques)[0] if mapped_techniques else None
-            desc = "Observed cyber behavior based on MISP indicators."
-            
-            if tech_id:
-                match = self.df_enterprise[self.df_enterprise['Tactic ID'] == tech_id]
-                if not match.empty:
-                    name = match.iloc[0].get('Tactic Name', tech_id)
-                    desc = f"Mapped to Technique {tech_id}: {name}"
-
+        core_event_id = "evt_01"
+        
+        if not technique_matches and not entities and not event_indicators:
+            # Completely empty event
+            pass
+        else:
             events.append(Event(
-                event_id="evt_01",
+                event_id=core_event_id,
                 action="Indicator Observation",
                 timestamp=cti_event.date,
                 sequence_number=1,
                 actor_id=actor_id,
                 target_ids=[e.entity_id for e in entities if e.entity_id != actor_id],
-                mitre_technique_id=tech_id,
-                description=desc
+                mitre_technique_id=None,
+                description="MISP indicators observed and compressed.",
+                indicators=list(set(event_indicators)) # Compressed graph array
             ))
+            
+            # 5. Create Probabilistic OBSERVED_TECHNIQUE Edges
+            for match in technique_matches:
+                tech_id = match.technique_id
+                confidence = match.confidence
+                
+                # Ensure the Technique node exists in the output so the edge is valid
+                tech_ent_id = f"tech_{tech_id}"
+                
+                # Check if we already created this technique node
+                if not any(e.entity_id == tech_ent_id for e in entities):
+                    # Lookup official name
+                    name = tech_id
+                    enterprise_match = self.df_enterprise[self.df_enterprise['Tactic ID'] == tech_id]
+                    if not enterprise_match.empty:
+                        name = enterprise_match.iloc[0].get('Tactic Name', tech_id)
+                        
+                    entities.append(Entity(
+                        entity_id=tech_ent_id,
+                        type=EntityType.TECHNIQUE,
+                        value=name,
+                        description=f"MITRE Technique {tech_id}"
+                    ))
+                
+                rel_id = f"rel_{rel_counter:02d}"
+                rel_counter += 1
+                
+                relationships.append(Relationship(
+                    relationship_id=rel_id,
+                    source_id=core_event_id,
+                    target_id=tech_ent_id,
+                    type=RelationshipType.OBSERVED_TECHNIQUE,
+                    confidence=confidence # Probabilistic fuzzy weighting for R-GCN
+                ))
 
         return ExtractionResult(
             metadata=metadata,

@@ -22,6 +22,7 @@ class RelationshipType(str, Enum):
     PARTICIPATED_IN = "PARTICIPATED_IN"    # Actor PARTICIPATED_IN Campaign
     CO_OCCURS_WITH = "CO_OCCURS_WITH"      # Entities found together without explicit action
     PRECEDES = "PRECEDES"                  # Event PRECEDES another event (can also be covered by TemporalCausalEdge)
+    OBSERVED_TECHNIQUE = "OBSERVED_TECHNIQUE" # Event observed probabilistically mapping to a Technique
 
 class TemporalCausalType(str, Enum):
     PRECEDES = "PRECEDES"                  # Event A is chronologically before Event B
@@ -49,6 +50,7 @@ class Event(BaseModel):
     target_ids: List[str] = Field(default_factory=list, description="List of entity_ids representing the targets of this action")
     mitre_technique_id: Optional[str] = Field(None, description="Standard MITRE Technique ID mapped to this event (e.g., 'T1003.001')")
     description: str = Field(..., description="Detailed description of what occurred during this event")
+    indicators: List[str] = Field(default_factory=list, description="Array of single-use infrastructure indicators (IPs, URLs) compressed into the event to prevent graph explosion.")
 
 class Relationship(BaseModel):
     relationship_id: str = Field(..., description="Unique relationship identifier (e.g., 'rel_01')")
