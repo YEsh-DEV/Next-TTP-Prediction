@@ -20,9 +20,9 @@ class ClassificationResult(BaseModel):
 class HybridClassifier:
     def __init__(self, base_dir: str):
         load_dotenv(os.path.join(base_dir, ".env"))
-        self.api_key = os.environ.get("GEMINI_AUTH_API_KEY") or os.environ.get("GEMINI_API_KEY")
+        self.api_key = os.environ.get("GEMINI_AUTH_API_KEY")
         if not self.api_key:
-            raise ValueError("GEMINI_AUTH_API_KEY or GEMINI_API_KEY is not set.")
+            raise ValueError("GEMINI_AUTH_API_KEY is not set.")
         
         self.client = genai.Client(api_key=self.api_key)
         
