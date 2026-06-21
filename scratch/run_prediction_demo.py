@@ -1,73 +1,55 @@
 import os
 import sys
-import json
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(base_dir)
 
 from pipeline.query_pipeline import GraphRAGPipeline
 from pipeline.prediction_layer import TemporalSequencer
-from pipeline.markov_predictor import MarkovPredictor
-from pipeline.graph_builder import SubgraphBuilder
-from pipeline.prediction_evaluation import PredictionEvaluator
+from pipeline.markov_predictor import GlobalMarkovPredictor
+from pipeline.deterministic_classifier_v2 import DeterministicClassifierV2
 
-def run_demo():
+def run_global_demo():
+    print("Loading Global Markov Matrix with V2 Deterministic Engine...")
     pipeline = GraphRAGPipeline(base_dir)
     sequencer = TemporalSequencer()
-    markov = MarkovPredictor()
-    builder = SubgraphBuilder()
-    evaluator = PredictionEvaluator()
+    markov = GlobalMarkovPredictor(base_dir)
+    classifier_v2 = DeterministicClassifierV2(base_dir)
     
-    queries = [
-        "Burning Umbrella",
-        "Operation Kitty",
-        "Lazarus Cryptocurrency"
-    ]
+    queries = ["Burning Umbrella", "Operation Kitty", "Lazarus Cryptocurrency"]
     
-    output_path = r"C:\Users\atmak\.gemini\antigravity-ide\brain\21851985-707e-4cab-bf5e-714d21b4905d\prediction_demo_report.md"
-    
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write("# PHASE-6 PREDICTION LAYER DEMO\n\n")
-        f.write("Executing the complete GraphRAG + Temporal Sequencing + Markov Chain prediction pipeline.\n\n")
+    for q in queries:
+        print(f"\n=================================================")
+        print(f"QUERY: {q}")
+        print(f"=================================================")
         
-        for q in queries:
-            f.write(f"## Target Query: `{q}`\n\n")
+        # 1. Retrieve Events
+        payload = pipeline.execute_query(q, top_k=3, classification_mode="deterministic")
+        retrieved_events = payload["retrieved_events"]
+        
+        # 2. Sequence Events
+        event_sequence = sequencer.sequence_events(retrieved_events, pipeline.all_events)
+        
+        # 3. Get latest event & Map to Technique using V2
+        if not event_sequence:
+            continue
             
-            # 1. Retrieval & GraphRAG Pipeline
-            payload = pipeline.execute_query(q, top_k=3, classification_mode="deterministic")
-            retrieved_events = payload["retrieved_events"]
+        latest_event_id = event_sequence[-1]
+        latest_event_obj = pipeline.all_events.get(latest_event_id)
+        
+        res = classifier_v2.classify_event(latest_event_obj)
+        if not res['techniques']:
+            continue
             
-            # 2. Temporal Sequencer
-            event_sequence = sequencer.sequence_events(retrieved_events, pipeline.all_events)
-            
-            # 3. Markov Predictor (Fit & Predict)
-            # We treat the sequence as a single chronological trajectory to train the matrix
-            markov.build_matrix([event_sequence])
-            
-            # Predict what event comes after the *last* known event in the sequence
-            last_event = event_sequence[-1] if event_sequence else None
-            predictions = markov.top_k_predictions(last_event, k=3) if last_event else []
-            
-            # 4. Graph Construction
-            G = builder.build_graph(q, event_sequence, payload)
-            
-            # 5. Statistical Evaluation
-            stats = evaluator.evaluate(event_sequence, G, markov.total_transitions)
-            
-            # Compile Final Payload
-            final_payload = {
-                "query": q,
-                "retrieved_events": retrieved_events,
-                "event_sequence": event_sequence,
-                "graph_statistics": stats,
-                "predicted_next_nodes": predictions
-            }
-            
-            f.write("```json\n")
-            f.write(json.dumps(final_payload, indent=4) + "\n")
-            f.write("```\n\n")
-
-    print(f"Prediction Proof saved to {output_path}")
+        latest_technique = res['techniques'][0]['id']
+        
+        # 4. Predict Next Technique from Global Matrix
+        predictions = markov.top_k_predictions(latest_technique, k=5)
+        
+        print(f"Current Technique (from latest event {latest_event_id}): {latest_technique}")
+        print(f"Top 5 Predicted Next Techniques:")
+        for i, p in enumerate(predictions):
+            print(f"  {i+1}. {p['state']} (Probability: {p['probability']})")
 
 if __name__ == "__main__":
-    run_demo()
+    run_global_demo()
