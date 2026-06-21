@@ -4,6 +4,7 @@ import chromadb
 from neo4j import GraphDatabase
 from sentence_transformers import SentenceTransformer
 from pipeline.hybrid_classifier import HybridClassifier
+from pipeline.deterministic_classifier import DeterministicClassifier
 from pipeline.xml_parser import parse_xml_file
 from dotenv import load_dotenv
 
@@ -13,7 +14,8 @@ class GraphRAGPipeline:
         self.chroma_client = chromadb.PersistentClient(path=os.path.join(base_dir, "chroma_db"))
         self.cti_collection = self.chroma_client.get_collection(name="cti_events")
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
-        self.classifier = HybridClassifier(base_dir)
+        self.hybrid_classifier = HybridClassifier(base_dir)
+        self.deterministic_classifier = DeterministicClassifier(base_dir)
         
         load_dotenv(os.path.join(base_dir, ".env"))
         self.neo4j_driver = GraphDatabase.driver(
@@ -22,9 +24,9 @@ class GraphRAGPipeline:
         )
         
         xml_path = os.path.join(base_dir, "CTI_Report_Dataset", "CTIDataset_2018_ReportEvent.xml")
-        self.all_events = {str(e.event_id): e for e in parse_xml_file(xml_path)}
+        self.all_events = {f"evt_{e.event_id}": e for e in parse_xml_file(xml_path)}
 
-    def execute_query(self, query: str, top_k: int = 3) -> dict:
+    def execute_query(self, query: str, top_k: int = 3, classification_mode: str = "deterministic") -> dict:
         q_emb = self.model.encode([query], show_progress_bar=False).tolist()[0]
         
         # 1. Retrieval
@@ -40,14 +42,17 @@ class GraphRAGPipeline:
         for eid in retrieved_ids:
             evt = self.all_events.get(eid)
             if evt:
-                matches = self.classifier.classify_event(evt)
-                for m in matches:
-                    mapped_techniques.add(m.technique_id)
-                    
-        # Active failover: if Gemini API exhausts limit (0 matches), perform localized Semantic Search on the cleansed vector pool
-        if not mapped_techniques:
-            m_res = self.classifier.collection.query(query_embeddings=[q_emb], n_results=2, include=["metadatas"])
-            mapped_techniques.update(m_res['ids'][0])
+                if classification_mode == "gemini":
+                    try:
+                        matches = self.hybrid_classifier.classify_event(evt)
+                        for m in matches: mapped_techniques.add(m.technique_id)
+                    except Exception: pass
+                elif classification_mode == "semantic":
+                    m_res = self.hybrid_classifier.collection.query(query_embeddings=[q_emb], n_results=3, include=["distances"])
+                    mapped_techniques.update(m_res['ids'][0])
+                elif classification_mode == "deterministic":
+                    det_result = self.deterministic_classifier.classify_event(evt)
+                    for t in det_result['techniques']: mapped_techniques.add(t['id'])
 
         mapped_techniques = list(mapped_techniques)
         
@@ -72,6 +77,7 @@ class GraphRAGPipeline:
         # 4. JSON Output
         return {
             "query": query,
+            "classification_mode": classification_mode,
             "retrieved_events": retrieved_ids,
             "mapped_techniques": mapped_techniques,
             "related_software": list(related_software),
