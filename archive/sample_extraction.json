@@ -1,0 +1,41 @@
+{
+    "metadata": {
+        "source_file": "CTIDataset_2018_ReportEvent.xml",
+        "report_date": "2018-01-26",
+        "extraction_timestamp": "2024-07-29T12:00:00Z"
+    },
+    "entities": [
+        {
+            "entity_id": "ent_01",
+            "type": "Campaign",
+            "value": "The TopHat Campaign",
+            "aliases": [],
+            "description": "attacks within the Middle East region using popular third-party services"
+        }
+    ],
+    "events": [],
+    "relationships": [],
+    "temporal_causal_edges": [],
+    "evidence": [
+        {
+            "evidence_id": "ev_01",
+            "target_id": "metadata.source_file",
+            "text_snippet": "CTIDataset_2018_ReportEvent.xml"
+        },
+        {
+            "evidence_id": "ev_02",
+            "target_id": "metadata.report_date",
+            "text_snippet": "2018-01-26"
+        },
+        {
+            "evidence_id": "ev_03",
+            "target_id": "ent_01",
+            "text_snippet": "The TopHat Campaign"
+        },
+        {
+            "evidence_id": "ev_04",
+            "target_id": "ent_01",
+            "text_snippet": "attacks within the Middle East region using popular third-party services"
+        }
+    ]
+}
