@@ -38,23 +38,27 @@ class GraphRAGPipeline:
         retrieved_ids = retrieval_res['ids'][0]
         
         # 2. Mapping
-        mapped_techniques = set()
+        mapped_techniques = []
         for eid in retrieved_ids:
             evt = self.all_events.get(eid)
             if evt:
                 if classification_mode == "gemini":
                     try:
                         matches = self.hybrid_classifier.classify_event(evt)
-                        for m in matches: mapped_techniques.add(m.technique_id)
+                        for m in matches: 
+                            if m.technique_id not in mapped_techniques:
+                                mapped_techniques.append(m.technique_id)
                     except Exception: pass
                 elif classification_mode == "semantic":
                     m_res = self.hybrid_classifier.collection.query(query_embeddings=[q_emb], n_results=3, include=["distances"])
-                    mapped_techniques.update(m_res['ids'][0])
+                    for t in m_res['ids'][0]:
+                        if t not in mapped_techniques:
+                            mapped_techniques.append(t)
                 elif classification_mode == "deterministic":
                     det_result = self.deterministic_classifier.classify_event(evt)
-                    for t in det_result['techniques']: mapped_techniques.add(t['id'])
-
-        mapped_techniques = list(mapped_techniques)
+                    for t in det_result['techniques']:
+                        if t['id'] not in mapped_techniques:
+                            mapped_techniques.append(t['id'])
         
         # 3. Traversal
         related_software = set()

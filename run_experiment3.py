@@ -29,7 +29,7 @@ class CLIWrapper:
         try:
             with self.pipeline.neo4j_driver.session() as session:
                 for t in techniques:
-                    res = session.run("MATCH (a:APTGroup)-[:USES]->(t:Technique {id: $tid}) RETURN a.name AS name", tid=t)
+                    res = session.run("MATCH (a:APTGroup)-[:USES]->(t:Technique {technique_id: $tid}) RETURN a.name AS name", tid=t)
                     for r in res:
                         apts.add(r["name"])
         except Exception:
@@ -45,7 +45,10 @@ class CLIWrapper:
         
         preds = []
         if mapped:
-            preds = self.markov.top_k_predictions(mapped[0], k=3)
+            for t in mapped:
+                preds = self.markov.top_k_predictions(t, k=3)
+                if preds:
+                    break
             
         apts = self.get_related_apts(mapped)
         
