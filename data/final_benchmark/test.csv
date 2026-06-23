@@ -1,0 +1,59 @@
+actor,src_node,tgt_node,src_technique,tgt_technique,src_date,tgt_date,src_event,tgt_event,src_info,tgt_info
+Lazarus,Lazarus::T1358,Lazarus::T1291,T1358,T1291,2018-06-23,2018-11-08,1057,644,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf
+Lazarus,Lazarus::T1358,Lazarus::T1087,T1358,T1087,2018-06-23,2018-11-08,1057,644,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf
+Andariel,Andariel::T1350,Andariel::T1211,T1350,T1211,2018-06-23,2018-07-16,1057,1299,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,new-andariel-reconnaissance-tactics-hint-at-next-targets.pdf
+Andariel,Andariel::T1350,Andariel::T1245,T1350,T1245,2018-06-23,2018-07-16,1057,1299,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,new-andariel-reconnaissance-tactics-hint-at-next-targets.pdf
+Andariel,Andariel::T1358,Andariel::T1211,T1358,T1211,2018-06-23,2018-07-16,1057,1299,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,new-andariel-reconnaissance-tactics-hint-at-next-targets.pdf
+Andariel,Andariel::T1358,Andariel::T1245,T1358,T1245,2018-06-23,2018-07-16,1057,1299,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,new-andariel-reconnaissance-tactics-hint-at-next-targets.pdf
+Turla,Turla::T1375,Turla::T1086,T1375,T1086,2018-08-21,2019-05-29,641,1790,Eset-Turla-Outlook-Backdoor.pdf,A dive into Turla PowerShell usage.pdf
+Turla,Turla::T1375,Turla::T1261,T1375,T1261,2018-08-21,2019-05-29,641,1790,Eset-Turla-Outlook-Backdoor.pdf,A dive into Turla PowerShell usage.pdf
+Turla,Turla::T1406,Turla::T1086,T1406,T1086,2018-08-21,2019-05-29,641,1790,Eset-Turla-Outlook-Backdoor.pdf,A dive into Turla PowerShell usage.pdf
+Turla,Turla::T1406,Turla::T1261,T1406,T1261,2018-08-21,2019-05-29,641,1790,Eset-Turla-Outlook-Backdoor.pdf,A dive into Turla PowerShell usage.pdf
+Apt10,Apt10::T1261,Apt10::T1375,T1261,T1375,2018-09-13,2019-02-06,272,1805,APT10 Targeting Japanese Corporations Using Updated TTPs.pdf,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf
+Apt10,Apt10::T1261,Apt10::T1261,T1261,T1261,2018-09-13,2019-02-06,272,1805,APT10 Targeting Japanese Corporations Using Updated TTPs.pdf,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf
+Apt10,Apt10::T1389,Apt10::T1375,T1389,T1375,2018-09-13,2019-02-06,272,1805,APT10 Targeting Japanese Corporations Using Updated TTPs.pdf,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf
+Apt10,Apt10::T1389,Apt10::T1261,T1389,T1261,2018-09-13,2019-02-06,272,1805,APT10 Targeting Japanese Corporations Using Updated TTPs.pdf,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf
+Lazarus,Lazarus::T1291,Lazarus::T1375,T1291,T1375,2018-11-08,2018-11-20,644,1075,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Lazarus,Lazarus::T1291,Lazarus::T1406,T1291,T1406,2018-11-08,2018-11-20,644,1075,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Lazarus,Lazarus::T1087,Lazarus::T1375,T1087,T1375,2018-11-08,2018-11-20,644,1075,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Lazarus,Lazarus::T1087,Lazarus::T1406,T1087,T1406,2018-11-08,2018-11-20,644,1075,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Conti,Conti::T1375,Conti::T1375,T1375,T1375,2018-11-20,2019-02-18,1075,2960,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp
+Conti,Conti::T1375,Conti::T1256,T1375,T1256,2018-11-20,2019-02-18,1075,2960,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp
+Conti,Conti::T1406,Conti::T1375,T1406,T1375,2018-11-20,2019-02-18,1075,2960,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp
+Conti,Conti::T1406,Conti::T1256,T1406,T1256,2018-11-20,2019-02-18,1075,2960,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp
+Lazarus,Lazarus::T1375,Lazarus::T1375,T1375,T1375,2018-11-20,2019-02-20,1075,2481,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,LAZARUS GROUP DIRECTED TO ORGANIZATIONS IN RUSSIA_google_translate.pdf
+Lazarus,Lazarus::T1375,Lazarus::T1428,T1375,T1428,2018-11-20,2019-02-20,1075,2481,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,LAZARUS GROUP DIRECTED TO ORGANIZATIONS IN RUSSIA_google_translate.pdf
+Lazarus,Lazarus::T1406,Lazarus::T1375,T1406,T1375,2018-11-20,2019-02-20,1075,2481,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,LAZARUS GROUP DIRECTED TO ORGANIZATIONS IN RUSSIA_google_translate.pdf
+Lazarus,Lazarus::T1406,Lazarus::T1428,T1406,T1428,2018-11-20,2019-02-20,1075,2481,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz,LAZARUS GROUP DIRECTED TO ORGANIZATIONS IN RUSSIA_google_translate.pdf
+Muddywater,Muddywater::T1406,Muddywater::T1406,T1406,T1406,2018-11-28,2018-11-30,802,920,MuddyWater-Operations-in-Lebanon-and-Oman.pdf,PowerShell-based Backdoor Found in Turkey Strikingly Similar to MuddyWater Tools
+Muddywater,Muddywater::T1406,Muddywater::T1027,T1406,T1027,2018-11-28,2018-11-30,802,920,MuddyWater-Operations-in-Lebanon-and-Oman.pdf,PowerShell-based Backdoor Found in Turkey Strikingly Similar to MuddyWater Tools
+Muddywater,Muddywater::T1027,Muddywater::T1406,T1027,T1406,2018-11-28,2018-11-30,802,920,MuddyWater-Operations-in-Lebanon-and-Oman.pdf,PowerShell-based Backdoor Found in Turkey Strikingly Similar to MuddyWater Tools
+Muddywater,Muddywater::T1027,Muddywater::T1027,T1027,T1027,2018-11-28,2018-11-30,802,920,MuddyWater-Operations-in-Lebanon-and-Oman.pdf,PowerShell-based Backdoor Found in Turkey Strikingly Similar to MuddyWater Tools
+Oceanlotus,Oceanlotus::T1423,Oceanlotus::T1406,T1423,T1406,2019-02-01,2019-04-02,2562,2510,OceanLotus_KerrDown.pdf,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf
+Oceanlotus,Oceanlotus::T1423,Oceanlotus::T1027,T1423,T1027,2019-02-01,2019-04-02,2562,2510,OceanLotus_KerrDown.pdf,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf
+Oceanlotus,Oceanlotus::T1046,Oceanlotus::T1406,T1046,T1406,2019-02-01,2019-04-02,2562,2510,OceanLotus_KerrDown.pdf,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf
+Oceanlotus,Oceanlotus::T1046,Oceanlotus::T1027,T1046,T1027,2019-02-01,2019-04-02,2562,2510,OceanLotus_KerrDown.pdf,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf
+Apt10,Apt10::T1375,Apt10::T1331,T1375,T1331,2019-02-06,2019-02-25,1805,2023,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf
+Apt10,Apt10::T1375,Apt10::T1309,T1375,T1309,2019-02-06,2019-02-25,1805,2023,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf
+Apt10,Apt10::T1261,Apt10::T1331,T1261,T1331,2019-02-06,2019-02-25,1805,2023,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf
+Apt10,Apt10::T1261,Apt10::T1309,T1261,T1309,2019-02-06,2019-02-25,1805,2023,APT10 Targeted Norwegian MSP and US Companies in Sustained Campaign.pdf,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf
+Conti,Conti::T1375,Conti::T1291,T1375,T1291,2019-02-18,2019-05-13,2960,2716,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf"
+Conti,Conti::T1375,Conti::T1101,T1375,T1101,2019-02-18,2019-05-13,2960,2716,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf"
+Conti,Conti::T1256,Conti::T1291,T1256,T1291,2019-02-18,2019-05-13,2960,2716,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf"
+Conti,Conti::T1256,Conti::T1101,T1256,T1101,2019-02-18,2019-05-13,2960,2716,apt-c-36-continuous-attacks-targeting-colombian-government-institutions-and-corp,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf"
+Apt10,Apt10::T1331,Apt10::T1418,T1331,T1418,2019-02-25,2019-05-24,2023,2851,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf,Uncovering New Activity By APT10.pdf
+Apt10,Apt10::T1331,Apt10::T1261,T1331,T1261,2019-02-25,2019-05-24,2023,2851,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf,Uncovering New Activity By APT10.pdf
+Apt10,Apt10::T1309,Apt10::T1418,T1309,T1418,2019-02-25,2019-05-24,2023,2851,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf,Uncovering New Activity By APT10.pdf
+Apt10,Apt10::T1309,Apt10::T1261,T1309,T1261,2019-02-25,2019-05-24,2023,2851,Defeating Compiler-Level Obfuscations Used in APT10 Malware.pdf,Uncovering New Activity By APT10.pdf
+Oceanlotus,Oceanlotus::T1406,Oceanlotus::T1259,T1406,T1259,2019-04-02,2019-06-20,2510,2497,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf,New Network Vermin from OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1406,Oceanlotus::T1135,T1406,T1135,2019-04-02,2019-06-20,2510,2497,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf,New Network Vermin from OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1027,Oceanlotus::T1259,T1027,T1259,2019-04-02,2019-06-20,2510,2497,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf,New Network Vermin from OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1027,Oceanlotus::T1135,T1027,T1135,2019-04-02,2019-06-20,2510,2497,OceanLotus-Steganography-Malware-Analysis-White-Paper.pdf,New Network Vermin from OceanLotus.pdf
+Conti,Conti::T1291,Conti::T1291,T1291,T1291,2019-05-13,2019-07-07,2716,2050,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf",FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Conti,Conti::T1291,Conti::T1350,T1291,T1350,2019-05-13,2019-07-07,2716,2050,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf",FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Conti,Conti::T1101,Conti::T1291,T1101,T1291,2019-05-13,2019-07-07,2716,2050,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf",FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Conti,Conti::T1101,Conti::T1350,T1101,T1350,2019-05-13,2019-07-07,2716,2050,"ScarCruft continues to evolve, introduces Bluetooth harvester _ Securelist.pdf",FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Oceanlotus,Oceanlotus::T1259,Oceanlotus::T1261,T1259,T1261,2019-06-20,2019-06-20,2497,2511,New Network Vermin from OceanLotus.pdf,OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1259,Oceanlotus::T1496,T1259,T1496,2019-06-20,2019-06-20,2497,2511,New Network Vermin from OceanLotus.pdf,OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1135,Oceanlotus::T1261,T1135,T1261,2019-06-20,2019-06-20,2497,2511,New Network Vermin from OceanLotus.pdf,OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1135,Oceanlotus::T1496,T1135,T1496,2019-06-20,2019-06-20,2497,2511,New Network Vermin from OceanLotus.pdf,OceanLotus.pdf

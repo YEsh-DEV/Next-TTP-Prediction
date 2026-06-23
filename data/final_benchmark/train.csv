@@ -1,0 +1,231 @@
+actor,src_node,tgt_node,src_technique,tgt_technique,src_date,tgt_date,src_event,tgt_event,src_info,tgt_info
+Apt1,Apt1::T1119,Apt1::T1228,T1119,T1228,2013-02-18,2013-03-27,1895,2415,Mandiant_APT1_Report.pdf,RAP002_APT1_Technical_backstage.1.0.pdf
+Apt1,Apt1::T1119,Apt1::T1246,T1119,T1246,2013-02-18,2013-03-27,1895,2415,Mandiant_APT1_Report.pdf,RAP002_APT1_Technical_backstage.1.0.pdf
+Apt1,Apt1::T1213,Apt1::T1228,T1213,T1228,2013-02-18,2013-03-27,1895,2415,Mandiant_APT1_Report.pdf,RAP002_APT1_Technical_backstage.1.0.pdf
+Apt1,Apt1::T1213,Apt1::T1246,T1213,T1246,2013-02-18,2013-03-27,1895,2415,Mandiant_APT1_Report.pdf,RAP002_APT1_Technical_backstage.1.0.pdf
+Conti,Conti::T1236,Conti::T1270,T1236,T1270,2013-12-02,2015-10-16,1683,5153,FTA 1010 - njRAT The Saga Continues.pdf,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf
+Conti,Conti::T1236,Conti::T1157,T1236,T1157,2013-12-02,2015-10-16,1683,5153,FTA 1010 - njRAT The Saga Continues.pdf,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf
+Conti,Conti::T1246,Conti::T1270,T1246,T1270,2013-12-02,2015-10-16,1683,5153,FTA 1010 - njRAT The Saga Continues.pdf,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf
+Conti,Conti::T1246,Conti::T1157,T1246,T1157,2013-12-02,2015-10-16,1683,5153,FTA 1010 - njRAT The Saga Continues.pdf,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf
+Turla,Turla::T1213,Turla::T1215,T1213,T1215,2014-03-08,2014-07-10,4705,3639,Reuters_Turla.pdf,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf
+Turla,Turla::T1213,Turla::T1277,T1213,T1277,2014-03-08,2014-07-10,4705,3639,Reuters_Turla.pdf,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf
+Turla,Turla::T1228,Turla::T1215,T1228,T1215,2014-03-08,2014-07-10,4705,3639,Reuters_Turla.pdf,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf
+Turla,Turla::T1228,Turla::T1277,T1228,T1277,2014-03-08,2014-07-10,4705,3639,Reuters_Turla.pdf,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf
+Turla,Turla::T1215,Turla::T1228,T1215,T1228,2014-07-10,2014-08-07,3639,4128,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf,EpicTurla.pdf
+Turla,Turla::T1215,Turla::T1119,T1215,T1119,2014-07-10,2014-08-07,3639,4128,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf,EpicTurla.pdf
+Turla,Turla::T1277,Turla::T1228,T1277,T1228,2014-07-10,2014-08-07,3639,4128,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf,EpicTurla.pdf
+Turla,Turla::T1277,Turla::T1119,T1277,T1119,2014-07-10,2014-08-07,3639,4128,circl-tr25-analysis-turla-pfinet-snake-uroburos.pdf,EpicTurla.pdf
+Turla,Turla::T1228,Turla::T1228,T1228,T1228,2014-08-07,2014-08-07,4128,4442,EpicTurla.pdf,KL_Epic_Turla_Technical_Appendix_20140806.pdf
+Turla,Turla::T1228,Turla::T1215,T1228,T1215,2014-08-07,2014-08-07,4128,4442,EpicTurla.pdf,KL_Epic_Turla_Technical_Appendix_20140806.pdf
+Turla,Turla::T1119,Turla::T1228,T1119,T1228,2014-08-07,2014-08-07,4128,4442,EpicTurla.pdf,KL_Epic_Turla_Technical_Appendix_20140806.pdf
+Turla,Turla::T1119,Turla::T1215,T1119,T1215,2014-08-07,2014-08-07,4128,4442,EpicTurla.pdf,KL_Epic_Turla_Technical_Appendix_20140806.pdf
+Turla,Turla::T1228,Turla::T1228,T1228,T1228,2014-08-07,2014-12-08,4442,4809,KL_Epic_Turla_Technical_Appendix_20140806.pdf,Turla_2_Penquin.pdf
+Turla,Turla::T1228,Turla::T1119,T1228,T1119,2014-08-07,2014-12-08,4442,4809,KL_Epic_Turla_Technical_Appendix_20140806.pdf,Turla_2_Penquin.pdf
+Turla,Turla::T1215,Turla::T1228,T1215,T1228,2014-08-07,2014-12-08,4442,4809,KL_Epic_Turla_Technical_Appendix_20140806.pdf,Turla_2_Penquin.pdf
+Turla,Turla::T1215,Turla::T1119,T1215,T1119,2014-08-07,2014-12-08,4442,4809,KL_Epic_Turla_Technical_Appendix_20140806.pdf,Turla_2_Penquin.pdf
+Sofacy,Sofacy::T1369,Sofacy::T1119,T1369,T1119,2014-10-22,2015-05-10,4762,5306,tactical-intelligence-bulletin---sofacy-phishing-.pdf,FSOFACY.pdf
+Sofacy,Sofacy::T1369,Sofacy::T1042,T1369,T1042,2014-10-22,2015-05-10,4762,5306,tactical-intelligence-bulletin---sofacy-phishing-.pdf,FSOFACY.pdf
+Sofacy,Sofacy::T1368,Sofacy::T1119,T1368,T1119,2014-10-22,2015-05-10,4762,5306,tactical-intelligence-bulletin---sofacy-phishing-.pdf,FSOFACY.pdf
+Sofacy,Sofacy::T1368,Sofacy::T1042,T1368,T1042,2014-10-22,2015-05-10,4762,5306,tactical-intelligence-bulletin---sofacy-phishing-.pdf,FSOFACY.pdf
+Apt28,Apt28::T1228,Apt28::T1228,T1228,T1228,2014-10-28,2017-01-11,3403,8700,apt28.pdf,FireEye_APT28-Center-of-Storm(01-11-2017).pdf
+Apt28,Apt28::T1228,Apt28::T1397,T1228,T1397,2014-10-28,2017-01-11,3403,8700,apt28.pdf,FireEye_APT28-Center-of-Storm(01-11-2017).pdf
+Apt28,Apt28::T1213,Apt28::T1228,T1213,T1228,2014-10-28,2017-01-11,3403,8700,apt28.pdf,FireEye_APT28-Center-of-Storm(01-11-2017).pdf
+Apt28,Apt28::T1213,Apt28::T1397,T1213,T1397,2014-10-28,2017-01-11,3403,8700,apt28.pdf,FireEye_APT28-Center-of-Storm(01-11-2017).pdf
+Fin4,Fin4::T1228,Fin4::T1283,T1228,T1283,2014-12-01,2015-06-24,4707,6252,rpt-fin4.pdf,UnFIN4ished_Business_pwd.pdf
+Fin4,Fin4::T1228,Fin4::T1272,T1228,T1272,2014-12-01,2015-06-24,4707,6252,rpt-fin4.pdf,UnFIN4ished_Business_pwd.pdf
+Fin4,Fin4::T1119,Fin4::T1283,T1119,T1283,2014-12-01,2015-06-24,4707,6252,rpt-fin4.pdf,UnFIN4ished_Business_pwd.pdf
+Fin4,Fin4::T1119,Fin4::T1272,T1119,T1272,2014-12-01,2015-06-24,4707,6252,rpt-fin4.pdf,UnFIN4ished_Business_pwd.pdf
+Turla,Turla::T1228,Turla::T1338,T1228,T1338,2014-12-08,2015-09-09,4809,5804,Turla_2_Penquin.pdf,SatelliteTurla(Securelist).pdf
+Turla,Turla::T1228,Turla::T1130,T1228,T1130,2014-12-08,2015-09-09,4809,5804,Turla_2_Penquin.pdf,SatelliteTurla(Securelist).pdf
+Turla,Turla::T1119,Turla::T1338,T1119,T1338,2014-12-08,2015-09-09,4809,5804,Turla_2_Penquin.pdf,SatelliteTurla(Securelist).pdf
+Turla,Turla::T1119,Turla::T1130,T1119,T1130,2014-12-08,2015-09-09,4809,5804,Turla_2_Penquin.pdf,SatelliteTurla(Securelist).pdf
+Carbanak,Carbanak::T1228,Carbanak::T1245,T1228,T1245,2015-02-16,2016-11-14,5076,8243,Carbanak_APT_eng.pdf,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf
+Carbanak,Carbanak::T1228,Carbanak::T1211,T1228,T1211,2015-02-16,2016-11-14,5076,8243,Carbanak_APT_eng.pdf,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf
+Carbanak,Carbanak::T1119,Carbanak::T1245,T1119,T1245,2015-02-16,2016-11-14,5076,8243,Carbanak_APT_eng.pdf,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf
+Carbanak,Carbanak::T1119,Carbanak::T1211,T1119,T1211,2015-02-16,2016-11-14,5076,8243,Carbanak_APT_eng.pdf,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf
+Sofacy,Sofacy::T1119,Sofacy::T1014,T1119,T1014,2015-05-10,2016-02-12,5306,7599,FSOFACY.pdf,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf
+Sofacy,Sofacy::T1119,Sofacy::T1389,T1119,T1389,2015-05-10,2016-02-12,5306,7599,FSOFACY.pdf,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf
+Sofacy,Sofacy::T1042,Sofacy::T1014,T1042,T1014,2015-05-10,2016-02-12,5306,7599,FSOFACY.pdf,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf
+Sofacy,Sofacy::T1042,Sofacy::T1389,T1042,T1389,2015-05-10,2016-02-12,5306,7599,FSOFACY.pdf,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf
+Oceanlotus,Oceanlotus::T1119,Oceanlotus::T1438,T1119,T1438,2015-05-29,2017-11-06,5386,9676,OceanLotusReport.pdf,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).
+Oceanlotus,Oceanlotus::T1119,Oceanlotus::T1025,T1119,T1025,2015-05-29,2017-11-06,5386,9676,OceanLotusReport.pdf,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).
+Oceanlotus,Oceanlotus::T1228,Oceanlotus::T1438,T1228,T1438,2015-05-29,2017-11-06,5386,9676,OceanLotusReport.pdf,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).
+Oceanlotus,Oceanlotus::T1228,Oceanlotus::T1025,T1228,T1025,2015-05-29,2017-11-06,5386,9676,OceanLotusReport.pdf,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).
+Apt29,Apt29::T1243,Apt29::T1172,T1243,T1172,2015-07-27,2017-03-27,4904,8703,apt29-hammertoss-stealthy-tactics-define-a.pdf,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf
+Apt29,Apt29::T1243,Apt29::T1415,T1243,T1415,2015-07-27,2017-03-27,4904,8703,apt29-hammertoss-stealthy-tactics-define-a.pdf,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf
+Apt29,Apt29::T1263,Apt29::T1172,T1263,T1172,2015-07-27,2017-03-27,4904,8703,apt29-hammertoss-stealthy-tactics-define-a.pdf,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf
+Apt29,Apt29::T1263,Apt29::T1415,T1263,T1415,2015-07-27,2017-03-27,4904,8703,apt29-hammertoss-stealthy-tactics-define-a.pdf,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf
+Turla,Turla::T1338,Turla::T1014,T1338,T1014,2015-09-09,2017-11-22,5804,8857,SatelliteTurla(Securelist).pdf,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf
+Turla,Turla::T1338,Turla::T1378,T1338,T1378,2015-09-09,2017-11-22,5804,8857,SatelliteTurla(Securelist).pdf,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf
+Turla,Turla::T1130,Turla::T1014,T1130,T1014,2015-09-09,2017-11-22,5804,8857,SatelliteTurla(Securelist).pdf,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf
+Turla,Turla::T1130,Turla::T1378,T1130,T1378,2015-09-09,2017-11-22,5804,8857,SatelliteTurla(Securelist).pdf,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf
+Conti,Conti::T1270,Conti::T1261,T1270,T1261,2015-10-16,2018-01-30,5153,1068,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf,apt32-continues-asean-targeting.pdf
+Conti,Conti::T1270,Conti::T1389,T1270,T1389,2015-10-16,2018-01-30,5153,1068,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf,apt32-continues-asean-targeting.pdf
+Conti,Conti::T1157,Conti::T1261,T1157,T1261,2015-10-16,2018-01-30,5153,1068,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf,apt32-continues-asean-targeting.pdf
+Conti,Conti::T1157,Conti::T1389,T1157,T1389,2015-10-16,2018-01-30,5153,1068,CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15).pdf,apt32-continues-asean-targeting.pdf
+Operation Black,Operation Black::T1119,Operation Black::T1066,T1119,T1066,2015-12-18,2015-12-18,5388,5445,Operation Black Atlas(TrendMicro)_part2.pdf,Operation Black Atlas_Indicators_of_Compromise.pdf
+Operation Black,Operation Black::T1119,Operation Black::T1246,T1119,T1246,2015-12-18,2015-12-18,5388,5445,Operation Black Atlas(TrendMicro)_part2.pdf,Operation Black Atlas_Indicators_of_Compromise.pdf
+Operation Black,Operation Black::T1228,Operation Black::T1066,T1228,T1066,2015-12-18,2015-12-18,5388,5445,Operation Black Atlas(TrendMicro)_part2.pdf,Operation Black Atlas_Indicators_of_Compromise.pdf
+Operation Black,Operation Black::T1228,Operation Black::T1246,T1228,T1246,2015-12-18,2015-12-18,5388,5445,Operation Black Atlas(TrendMicro)_part2.pdf,Operation Black Atlas_Indicators_of_Compromise.pdf
+Sofacy,Sofacy::T1014,Sofacy::T1119,T1014,T1119,2016-02-12,2016-06-14,7599,7768,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf,PaloAlto_SofacyUSGov(06-14-2016).pdf
+Sofacy,Sofacy::T1014,Sofacy::T1228,T1014,T1228,2016-02-12,2016-06-14,7599,7768,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf,PaloAlto_SofacyUSGov(06-14-2016).pdf
+Sofacy,Sofacy::T1389,Sofacy::T1119,T1389,T1119,2016-02-12,2016-06-14,7599,7768,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf,PaloAlto_SofacyUSGov(06-14-2016).pdf
+Sofacy,Sofacy::T1389,Sofacy::T1228,T1389,T1228,2016-02-12,2016-06-14,7599,7768,PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16).pdf,PaloAlto_SofacyUSGov(06-14-2016).pdf
+Sofacy,Sofacy::T1119,Sofacy::T1277,T1119,T1277,2016-06-14,2016-09-26,7768,7764,PaloAlto_SofacyUSGov(06-14-2016).pdf,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf
+Sofacy,Sofacy::T1119,Sofacy::T1266,T1119,T1266,2016-06-14,2016-09-26,7768,7764,PaloAlto_SofacyUSGov(06-14-2016).pdf,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf
+Sofacy,Sofacy::T1228,Sofacy::T1277,T1228,T1277,2016-06-14,2016-09-26,7768,7764,PaloAlto_SofacyUSGov(06-14-2016).pdf,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf
+Sofacy,Sofacy::T1228,Sofacy::T1266,T1228,T1266,2016-06-14,2016-09-26,7768,7764,PaloAlto_SofacyUSGov(06-14-2016).pdf,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf
+Patchwork,Patchwork::T1500,Patchwork::T1500,T1500,T1500,2016-07-07,2016-07-07,7148,7149,Cymmetria_Unveiling-Patchwork(Jul-7-16)(1).pdf,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf
+Patchwork,Patchwork::T1500,Patchwork::T1119,T1500,T1119,2016-07-07,2016-07-07,7148,7149,Cymmetria_Unveiling-Patchwork(Jul-7-16)(1).pdf,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf
+Patchwork,Patchwork::T1119,Patchwork::T1500,T1119,T1500,2016-07-07,2016-07-07,7148,7149,Cymmetria_Unveiling-Patchwork(Jul-7-16)(1).pdf,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf
+Patchwork,Patchwork::T1119,Patchwork::T1119,T1119,T1119,2016-07-07,2016-07-07,7148,7149,Cymmetria_Unveiling-Patchwork(Jul-7-16)(1).pdf,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf
+Patchwork,Patchwork::T1500,Patchwork::T1291,T1500,T1291,2016-07-07,2018-03-07,7149,1366,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf,patchwork-continues-deliver-badnews.pdf
+Patchwork,Patchwork::T1500,Patchwork::T1350,T1500,T1350,2016-07-07,2018-03-07,7149,1366,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf,patchwork-continues-deliver-badnews.pdf
+Patchwork,Patchwork::T1119,Patchwork::T1291,T1119,T1291,2016-07-07,2018-03-07,7149,1366,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf,patchwork-continues-deliver-badnews.pdf
+Patchwork,Patchwork::T1119,Patchwork::T1350,T1119,T1350,2016-07-07,2018-03-07,7149,1366,Cymmetria_Unveiling-Patchwork(Jul-7-16).pdf,patchwork-continues-deliver-badnews.pdf
+Sofacy,Sofacy::T1277,Sofacy::T1291,T1277,T1291,2016-09-26,2018-02-20,7764,266,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf,A Slice of 2017 Sofacy Activity - Securelist.pdf
+Sofacy,Sofacy::T1277,Sofacy::T1256,T1277,T1256,2016-09-26,2018-02-20,7764,266,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf,A Slice of 2017 Sofacy Activity - Securelist.pdf
+Sofacy,Sofacy::T1266,Sofacy::T1291,T1266,T1291,2016-09-26,2018-02-20,7764,266,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf,A Slice of 2017 Sofacy Activity - Securelist.pdf
+Sofacy,Sofacy::T1266,Sofacy::T1256,T1266,T1256,2016-09-26,2018-02-20,7764,266,PaloAlto_Sofacys_Komplex_OSXTrojan(09-26-2016).pdf,A Slice of 2017 Sofacy Activity - Securelist.pdf
+Carbanak,Carbanak::T1245,Carbanak::T1132,T1245,T1132,2016-11-14,2017-01-01,8243,9659,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf
+Carbanak,Carbanak::T1245,Carbanak::T1419,T1245,T1419,2016-11-14,2017-01-01,8243,9659,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf
+Carbanak,Carbanak::T1211,Carbanak::T1132,T1211,T1132,2016-11-14,2017-01-01,8243,9659,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf
+Carbanak,Carbanak::T1211,Carbanak::T1419,T1211,T1419,2016-11-14,2017-01-01,8243,9659,Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016).pdf,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf
+Carbanak,Carbanak::T1132,Carbanak::T1119,T1132,T1119,2017-01-01,2017-11-22,9659,9642,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Carbanak,Carbanak::T1132,Carbanak::T1236,T1132,T1236,2017-01-01,2017-11-22,9659,9642,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Carbanak,Carbanak::T1419,Carbanak::T1119,T1419,T1119,2017-01-01,2017-11-22,9659,9642,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Carbanak,Carbanak::T1419,Carbanak::T1236,T1419,T1236,2017-01-01,2017-11-22,9659,9642,tr1adx_Digital-Plagarist-Carbanak(01-01-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Apt28,Apt28::T1228,Apt28::T1378,T1228,T1378,2017-01-11,2017-11-07,8700,8844,FireEye_APT28-Center-of-Storm(01-11-2017).pdf,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf
+Apt28,Apt28::T1228,Apt28::T1394,T1228,T1394,2017-01-11,2017-11-07,8700,8844,FireEye_APT28-Center-of-Storm(01-11-2017).pdf,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf
+Apt28,Apt28::T1397,Apt28::T1378,T1397,T1378,2017-01-11,2017-11-07,8700,8844,FireEye_APT28-Center-of-Storm(01-11-2017).pdf,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf
+Apt28,Apt28::T1397,Apt28::T1394,T1397,T1394,2017-01-11,2017-11-07,8700,8844,FireEye_APT28-Center-of-Storm(01-11-2017).pdf,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf
+Lazarus,Lazarus::T1020,Lazarus::T1378,T1020,T1378,2017-02-12,2017-02-20,8484,8477,BAESystems_Lazarus-Watering-hole-attacks(02-12-2017).pdf,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf
+Lazarus,Lazarus::T1020,Lazarus::T1359,T1020,T1359,2017-02-12,2017-02-20,8484,8477,BAESystems_Lazarus-Watering-hole-attacks(02-12-2017).pdf,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf
+Lazarus,Lazarus::T1048,Lazarus::T1378,T1048,T1378,2017-02-12,2017-02-20,8484,8477,BAESystems_Lazarus-Watering-hole-attacks(02-12-2017).pdf,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf
+Lazarus,Lazarus::T1048,Lazarus::T1359,T1048,T1359,2017-02-12,2017-02-20,8484,8477,BAESystems_Lazarus-Watering-hole-attacks(02-12-2017).pdf,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf
+Lazarus,Lazarus::T1378,Lazarus::T1014,T1378,T1014,2017-02-20,2017-04-03,8477,8803,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf
+Lazarus,Lazarus::T1378,Lazarus::T1389,T1378,T1389,2017-02-20,2017-04-03,8477,8803,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf
+Lazarus,Lazarus::T1359,Lazarus::T1014,T1359,T1014,2017-02-20,2017-04-03,8477,8803,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf
+Lazarus,Lazarus::T1359,Lazarus::T1389,T1359,T1389,2017-02-20,2017-04-03,8477,8803,BAESystems_Lazarus-FalseFlag-Malware(02-20-2017).pdf,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf
+Fin7,Fin7::T1397,Fin7::T1119,T1397,T1119,2017-03-07,2017-11-22,8699,9642,FireEye-FIN7-SpearPhishing-Targets-SEC-Filings(03-07-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Fin7,Fin7::T1397,Fin7::T1236,T1397,T1236,2017-03-07,2017-11-22,8699,9642,FireEye-FIN7-SpearPhishing-Targets-SEC-Filings(03-07-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Fin7,Fin7::T1192,Fin7::T1119,T1192,T1119,2017-03-07,2017-11-22,8699,9642,FireEye-FIN7-SpearPhishing-Targets-SEC-Filings(03-07-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Fin7,Fin7::T1192,Fin7::T1236,T1192,T1236,2017-03-07,2017-11-22,8699,9642,FireEye-FIN7-SpearPhishing-Targets-SEC-Filings(03-07-2017).pdf,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf
+Apt29,Apt29::T1172,Apt29::T1369,T1172,T1369,2017-03-27,2018-11-19,8703,1313,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf,not-so-cozy-an-uncomfortable-examination-of-a-suspected-apt29-phishing-campaign.
+Apt29,Apt29::T1172,Apt29::T1366,T1172,T1366,2017-03-27,2018-11-19,8703,1313,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf,not-so-cozy-an-uncomfortable-examination-of-a-suspected-apt29-phishing-campaign.
+Apt29,Apt29::T1415,Apt29::T1369,T1415,T1369,2017-03-27,2018-11-19,8703,1313,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf,not-so-cozy-an-uncomfortable-examination-of-a-suspected-apt29-phishing-campaign.
+Apt29,Apt29::T1415,Apt29::T1366,T1415,T1366,2017-03-27,2018-11-19,8703,1313,FireEye_APT29-Domain-Fronting-With-TOR(03-27-2017).pdf,not-so-cozy-an-uncomfortable-examination-of-a-suspected-apt29-phishing-campaign.
+Lazarus,Lazarus::T1014,Lazarus::T1355,T1014,T1355,2017-04-03,2017-10-16,8803,8494,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf
+Lazarus,Lazarus::T1014,Lazarus::T1378,T1014,T1378,2017-04-03,2017-10-16,8803,8494,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf
+Lazarus,Lazarus::T1389,Lazarus::T1355,T1389,T1355,2017-04-03,2017-10-16,8803,8494,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf
+Lazarus,Lazarus::T1389,Lazarus::T1378,T1389,T1378,2017-04-03,2017-10-16,8803,8494,Kaspersky_Lazarus-Under-The-Hood-PDF_final(04-03-2017).pdf,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf
+Apt32,Apt32::T1263,Apt32::T1261,T1263,T1261,2017-05-14,2018-01-30,8712,1068,FireEye_Cyber-Espionage-Alive-Well-APT32(05-14-2017).pdf,apt32-continues-asean-targeting.pdf
+Apt32,Apt32::T1263,Apt32::T1389,T1263,T1389,2017-05-14,2018-01-30,8712,1068,FireEye_Cyber-Espionage-Alive-Well-APT32(05-14-2017).pdf,apt32-continues-asean-targeting.pdf
+Apt32,Apt32::T1294,Apt32::T1261,T1294,T1261,2017-05-14,2018-01-30,8712,1068,FireEye_Cyber-Espionage-Alive-Well-APT32(05-14-2017).pdf,apt32-continues-asean-targeting.pdf
+Apt32,Apt32::T1294,Apt32::T1389,T1294,T1389,2017-05-14,2018-01-30,8712,1068,FireEye_Cyber-Espionage-Alive-Well-APT32(05-14-2017).pdf,apt32-continues-asean-targeting.pdf
+Apt3,Apt3::T1429,Apt3::T1014,T1429,T1014,2017-05-17,2018-05-22,9628,979,RecordedFuture_Chinese-Ministry-State-APT3(05-17-2017).pdf,The_destruction_of_APT3.pdf
+Apt3,Apt3::T1429,Apt3::T1478,T1429,T1478,2017-05-17,2018-05-22,9628,979,RecordedFuture_Chinese-Ministry-State-APT3(05-17-2017).pdf,The_destruction_of_APT3.pdf
+Apt3,Apt3::T1125,Apt3::T1014,T1125,T1014,2017-05-17,2018-05-22,9628,979,RecordedFuture_Chinese-Ministry-State-APT3(05-17-2017).pdf,The_destruction_of_APT3.pdf
+Apt3,Apt3::T1125,Apt3::T1478,T1125,T1478,2017-05-17,2018-05-22,9628,979,RecordedFuture_Chinese-Ministry-State-APT3(05-17-2017).pdf,The_destruction_of_APT3.pdf
+Lazarus,Lazarus::T1355,Lazarus::T1291,T1355,T1291,2017-10-16,2018-01-24,8494,715,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf
+Lazarus,Lazarus::T1355,Lazarus::T1389,T1355,T1389,2017-10-16,2018-01-24,8494,715,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf
+Lazarus,Lazarus::T1378,Lazarus::T1291,T1378,T1291,2017-10-16,2018-01-24,8494,715,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf
+Lazarus,Lazarus::T1378,Lazarus::T1389,T1378,T1389,2017-10-16,2018-01-24,8494,715,BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017).pdf,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf
+Chessmaster,Chessmaster::T1243,Chessmaster::T1291,T1243,T1291,2017-11-06,2018-03-29,9661,468,TrendMicro_ChessMasters-New-Strategy-Evolving-Tools-Tactics(11-06-2017).pdf,ChessMaster Adds Updated Tools to Its Arsenal.pdf
+Chessmaster,Chessmaster::T1243,Chessmaster::T1350,T1243,T1350,2017-11-06,2018-03-29,9661,468,TrendMicro_ChessMasters-New-Strategy-Evolving-Tools-Tactics(11-06-2017).pdf,ChessMaster Adds Updated Tools to Its Arsenal.pdf
+Chessmaster,Chessmaster::T1159,Chessmaster::T1291,T1159,T1291,2017-11-06,2018-03-29,9661,468,TrendMicro_ChessMasters-New-Strategy-Evolving-Tools-Tactics(11-06-2017).pdf,ChessMaster Adds Updated Tools to Its Arsenal.pdf
+Chessmaster,Chessmaster::T1159,Chessmaster::T1350,T1159,T1350,2017-11-06,2018-03-29,9661,468,TrendMicro_ChessMasters-New-Strategy-Evolving-Tools-Tactics(11-06-2017).pdf,ChessMaster Adds Updated Tools to Its Arsenal.pdf
+Oceanlotus,Oceanlotus::T1438,Oceanlotus::T1496,T1438,T1496,2017-11-06,2018-03-13,9676,623,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).,ESET_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1438,Oceanlotus::T1261,T1438,T1261,2017-11-06,2018-03-13,9676,623,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).,ESET_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1025,Oceanlotus::T1496,T1025,T1496,2017-11-06,2018-03-13,9676,623,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).,ESET_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1025,Oceanlotus::T1261,T1025,T1261,2017-11-06,2018-03-13,9676,623,Volexity_OceanLotus-Mass-Digital-Surveillance-Targeting-ASEAN-Media(11-06-2017).,ESET_OceanLotus.pdf
+Apt28,Apt28::T1378,Apt28::T1478,T1378,T1478,2017-11-07,2018-07-13,8844,225,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf,20180713_CSE_APT28_X-Agent_Op-Roman Holiday-Report_v6_1.pdf
+Apt28,Apt28::T1378,Apt28::T1256,T1378,T1256,2017-11-07,2018-07-13,8844,225,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf,20180713_CSE_APT28_X-Agent_Op-Roman Holiday-Report_v6_1.pdf
+Apt28,Apt28::T1394,Apt28::T1478,T1394,T1478,2017-11-07,2018-07-13,8844,225,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf,20180713_CSE_APT28_X-Agent_Op-Roman Holiday-Report_v6_1.pdf
+Apt28,Apt28::T1394,Apt28::T1256,T1394,T1256,2017-11-07,2018-07-13,8844,225,McAfee_APT28-Office-Malware-Doc-Citing-NYC-TerrorAttack(11-07-2017).pdf,20180713_CSE_APT28_X-Agent_Op-Roman Holiday-Report_v6_1.pdf
+Turla,Turla::T1014,Turla::T1261,T1014,T1261,2017-11-22,2018-01-09,8857,637,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf,ESET_Turla_Mosquito.pdf
+Turla,Turla::T1014,Turla::T1395,T1014,T1395,2017-11-22,2018-01-09,8857,637,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf,ESET_Turla_Mosquito.pdf
+Turla,Turla::T1378,Turla::T1261,T1378,T1261,2017-11-22,2018-01-09,8857,637,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf,ESET_Turla_Mosquito.pdf
+Turla,Turla::T1378,Turla::T1395,T1378,T1395,2017-11-22,2018-01-09,8857,637,NCSC_Turla-Neuron-Nautilus-Snake-malware_1(11-22-2017).pdf,ESET_Turla_Mosquito.pdf
+Carbanak,Carbanak::T1119,Carbanak::T1119,T1119,T1119,2017-11-22,2017-11-30,9642,9645,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,RSA_the-shadows-of-ghosts-carbanak-report(11-30-2017).pdf
+Carbanak,Carbanak::T1119,Carbanak::T1287,T1119,T1287,2017-11-22,2017-11-30,9642,9645,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,RSA_the-shadows-of-ghosts-carbanak-report(11-30-2017).pdf
+Carbanak,Carbanak::T1236,Carbanak::T1119,T1236,T1119,2017-11-22,2017-11-30,9642,9645,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,RSA_the-shadows-of-ghosts-carbanak-report(11-30-2017).pdf
+Carbanak,Carbanak::T1236,Carbanak::T1287,T1236,T1287,2017-11-22,2017-11-30,9642,9645,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,RSA_the-shadows-of-ghosts-carbanak-report(11-30-2017).pdf
+Fin7,Fin7::T1119,Fin7::T1291,T1119,T1291,2017-11-22,2019-07-07,9642,2050,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Fin7,Fin7::T1119,Fin7::T1350,T1119,T1350,2017-11-22,2019-07-07,9642,2050,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Fin7,Fin7::T1236,Fin7::T1291,T1236,T1291,2017-11-22,2019-07-07,9642,2050,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Fin7,Fin7::T1236,Fin7::T1350,T1236,T1350,2017-11-22,2019-07-07,9642,2050,RSA_the-carbanak-fin7-syndicate(11-22-2017).pdf,FIN7.5_ the infamous cybercrime rig “FIN7” continues its activities.pdf
+Turla,Turla::T1261,Turla::T1362,T1261,T1362,2018-01-09,2018-05-22,637,1634,ESET_Turla_Mosquito.pdf,turla-mosquito-shift-towards-generic-tools.pdf
+Turla,Turla::T1261,Turla::T1261,T1261,T1261,2018-01-09,2018-05-22,637,1634,ESET_Turla_Mosquito.pdf,turla-mosquito-shift-towards-generic-tools.pdf
+Turla,Turla::T1395,Turla::T1362,T1395,T1362,2018-01-09,2018-05-22,637,1634,ESET_Turla_Mosquito.pdf,turla-mosquito-shift-towards-generic-tools.pdf
+Turla,Turla::T1395,Turla::T1261,T1395,T1261,2018-01-09,2018-05-22,637,1634,ESET_Turla_Mosquito.pdf,turla-mosquito-shift-towards-generic-tools.pdf
+Lazarus,Lazarus::T1291,Lazarus::T1350,T1291,T1350,2018-01-24,2018-06-23,715,1057,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Lazarus,Lazarus::T1291,Lazarus::T1358,T1291,T1358,2018-01-24,2018-06-23,715,1057,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Lazarus,Lazarus::T1389,Lazarus::T1350,T1389,T1350,2018-01-24,2018-06-23,715,1057,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Lazarus,Lazarus::T1389,Lazarus::T1358,T1389,T1358,2018-01-24,2018-06-23,715,1057,Lazarus_Campaign_Targeting_Cryptocurrencies.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Vermin,Vermin::T1014,Vermin::T1259,T1014,T1259,2018-01-29,2019-06-20,1033,2497,VERMIN_ Quasar RAT and Custom Malware Used In Ukraine.pdf,New Network Vermin from OceanLotus.pdf
+Vermin,Vermin::T1014,Vermin::T1135,T1014,T1135,2018-01-29,2019-06-20,1033,2497,VERMIN_ Quasar RAT and Custom Malware Used In Ukraine.pdf,New Network Vermin from OceanLotus.pdf
+Vermin,Vermin::T1378,Vermin::T1259,T1378,T1259,2018-01-29,2019-06-20,1033,2497,VERMIN_ Quasar RAT and Custom Malware Used In Ukraine.pdf,New Network Vermin from OceanLotus.pdf
+Vermin,Vermin::T1378,Vermin::T1135,T1378,T1135,2018-01-29,2019-06-20,1033,2497,VERMIN_ Quasar RAT and Custom Malware Used In Ukraine.pdf,New Network Vermin from OceanLotus.pdf
+Conti,Conti::T1261,Conti::T1496,T1261,T1496,2018-01-30,2018-01-31,1068,1696,apt32-continues-asean-targeting.pdf,unit42-comnie-continues-target-organizations-east-asia.pdf
+Conti,Conti::T1261,Conti::T1428,T1261,T1428,2018-01-30,2018-01-31,1068,1696,apt32-continues-asean-targeting.pdf,unit42-comnie-continues-target-organizations-east-asia.pdf
+Conti,Conti::T1389,Conti::T1496,T1389,T1496,2018-01-30,2018-01-31,1068,1696,apt32-continues-asean-targeting.pdf,unit42-comnie-continues-target-organizations-east-asia.pdf
+Conti,Conti::T1389,Conti::T1428,T1389,T1428,2018-01-30,2018-01-31,1068,1696,apt32-continues-asean-targeting.pdf,unit42-comnie-continues-target-organizations-east-asia.pdf
+Conti,Conti::T1496,Conti::T1291,T1496,T1291,2018-01-31,2018-03-07,1696,1366,unit42-comnie-continues-target-organizations-east-asia.pdf,patchwork-continues-deliver-badnews.pdf
+Conti,Conti::T1496,Conti::T1350,T1496,T1350,2018-01-31,2018-03-07,1696,1366,unit42-comnie-continues-target-organizations-east-asia.pdf,patchwork-continues-deliver-badnews.pdf
+Conti,Conti::T1428,Conti::T1291,T1428,T1291,2018-01-31,2018-03-07,1696,1366,unit42-comnie-continues-target-organizations-east-asia.pdf,patchwork-continues-deliver-badnews.pdf
+Conti,Conti::T1428,Conti::T1350,T1428,T1350,2018-01-31,2018-03-07,1696,1366,unit42-comnie-continues-target-organizations-east-asia.pdf,patchwork-continues-deliver-badnews.pdf
+Apt37,Apt37::T1291,Apt37::T1423,T1291,T1423,2018-02-20,2019-07-07,1413,274,rpt_APT37.pdf,APT37_Final1stspyReapingtheFreeMilk-Intezer.pdf
+Apt37,Apt37::T1291,Apt37::T1046,T1291,T1046,2018-02-20,2019-07-07,1413,274,rpt_APT37.pdf,APT37_Final1stspyReapingtheFreeMilk-Intezer.pdf
+Apt37,Apt37::T1389,Apt37::T1423,T1389,T1423,2018-02-20,2019-07-07,1413,274,rpt_APT37.pdf,APT37_Final1stspyReapingtheFreeMilk-Intezer.pdf
+Apt37,Apt37::T1389,Apt37::T1046,T1389,T1046,2018-02-20,2019-07-07,1413,274,rpt_APT37.pdf,APT37_Final1stspyReapingtheFreeMilk-Intezer.pdf
+Sofacy,Sofacy::T1291,Sofacy::T1375,T1291,T1375,2018-02-20,2018-02-28,266,968,A Slice of 2017 Sofacy Activity - Securelist.pdf,Sofacy Attacks Multiple Government Entities.pdf
+Sofacy,Sofacy::T1291,Sofacy::T1256,T1291,T1256,2018-02-20,2018-02-28,266,968,A Slice of 2017 Sofacy Activity - Securelist.pdf,Sofacy Attacks Multiple Government Entities.pdf
+Sofacy,Sofacy::T1256,Sofacy::T1375,T1256,T1375,2018-02-20,2018-02-28,266,968,A Slice of 2017 Sofacy Activity - Securelist.pdf,Sofacy Attacks Multiple Government Entities.pdf
+Sofacy,Sofacy::T1256,Sofacy::T1256,T1256,T1256,2018-02-20,2018-02-28,266,968,A Slice of 2017 Sofacy Activity - Securelist.pdf,Sofacy Attacks Multiple Government Entities.pdf
+Sofacy,Sofacy::T1375,Sofacy::T1245,T1375,T1245,2018-02-28,2018-06-06,968,1466,Sofacy Attacks Multiple Government Entities.pdf,sofacy-groups-parallel-attacks.pdf
+Sofacy,Sofacy::T1375,Sofacy::T1371,T1375,T1371,2018-02-28,2018-06-06,968,1466,Sofacy Attacks Multiple Government Entities.pdf,sofacy-groups-parallel-attacks.pdf
+Sofacy,Sofacy::T1256,Sofacy::T1245,T1256,T1245,2018-02-28,2018-06-06,968,1466,Sofacy Attacks Multiple Government Entities.pdf,sofacy-groups-parallel-attacks.pdf
+Sofacy,Sofacy::T1256,Sofacy::T1371,T1256,T1371,2018-02-28,2018-06-06,968,1466,Sofacy Attacks Multiple Government Entities.pdf,sofacy-groups-parallel-attacks.pdf
+Conti,Conti::T1291,Conti::T1375,T1291,T1375,2018-03-07,2018-11-20,1366,1075,patchwork-continues-deliver-badnews.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Conti,Conti::T1291,Conti::T1406,T1291,T1406,2018-03-07,2018-11-20,1366,1075,patchwork-continues-deliver-badnews.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Conti,Conti::T1350,Conti::T1375,T1350,T1375,2018-03-07,2018-11-20,1366,1075,patchwork-continues-deliver-badnews.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Conti,Conti::T1350,Conti::T1406,T1350,T1406,2018-03-07,2018-11-20,1366,1075,patchwork-continues-deliver-badnews.pdf,blog.trendmicro.com-Lazarus Continues Heists Mounts Attacks on Financial Organiz
+Patchwork,Patchwork::T1291,Patchwork::T1389,T1291,T1389,2018-03-07,2018-06-07,1366,1358,patchwork-continues-deliver-badnews.pdf,patchwork-apt-group-targets-us-think-tanks.pdf
+Patchwork,Patchwork::T1291,Patchwork::T1291,T1291,T1291,2018-03-07,2018-06-07,1366,1358,patchwork-continues-deliver-badnews.pdf,patchwork-apt-group-targets-us-think-tanks.pdf
+Patchwork,Patchwork::T1350,Patchwork::T1389,T1350,T1389,2018-03-07,2018-06-07,1366,1358,patchwork-continues-deliver-badnews.pdf,patchwork-apt-group-targets-us-think-tanks.pdf
+Patchwork,Patchwork::T1350,Patchwork::T1291,T1350,T1291,2018-03-07,2018-06-07,1366,1358,patchwork-continues-deliver-badnews.pdf,patchwork-apt-group-targets-us-think-tanks.pdf
+Muddywater,Muddywater::T1291,Muddywater::T1291,T1291,T1291,2018-03-12,2018-06-14,815,1062,MuddyWater_Middle_East_and_Central_Asia.pdf,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf
+Muddywater,Muddywater::T1291,Muddywater::T1354,T1291,T1354,2018-03-12,2018-06-14,815,1062,MuddyWater_Middle_East_and_Central_Asia.pdf,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf
+Muddywater,Muddywater::T1354,Muddywater::T1291,T1354,T1291,2018-03-12,2018-06-14,815,1062,MuddyWater_Middle_East_and_Central_Asia.pdf,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf
+Muddywater,Muddywater::T1354,Muddywater::T1354,T1354,T1354,2018-03-12,2018-06-14,815,1062,MuddyWater_Middle_East_and_Central_Asia.pdf,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf
+Oceanlotus,Oceanlotus::T1496,Oceanlotus::T1291,T1496,T1291,2018-03-13,2018-04-04,623,745,ESET_OceanLotus.pdf,MacOS_Backdoor_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1496,Oceanlotus::T1354,T1496,T1354,2018-03-13,2018-04-04,623,745,ESET_OceanLotus.pdf,MacOS_Backdoor_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1261,Oceanlotus::T1291,T1261,T1291,2018-03-13,2018-04-04,623,745,ESET_OceanLotus.pdf,MacOS_Backdoor_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1261,Oceanlotus::T1354,T1261,T1354,2018-03-13,2018-04-04,623,745,ESET_OceanLotus.pdf,MacOS_Backdoor_OceanLotus.pdf
+Oceanlotus,Oceanlotus::T1291,Oceanlotus::T1378,T1291,T1378,2018-04-04,2018-04-27,745,463,MacOS_Backdoor_OceanLotus.pdf,CN_OceanLotus_new_malware.pdf
+Oceanlotus,Oceanlotus::T1291,Oceanlotus::T1359,T1291,T1359,2018-04-04,2018-04-27,745,463,MacOS_Backdoor_OceanLotus.pdf,CN_OceanLotus_new_malware.pdf
+Oceanlotus,Oceanlotus::T1354,Oceanlotus::T1378,T1354,T1378,2018-04-04,2018-04-27,745,463,MacOS_Backdoor_OceanLotus.pdf,CN_OceanLotus_new_malware.pdf
+Oceanlotus,Oceanlotus::T1354,Oceanlotus::T1359,T1354,T1359,2018-04-04,2018-04-27,745,463,MacOS_Backdoor_OceanLotus.pdf,CN_OceanLotus_new_malware.pdf
+Oceanlotus,Oceanlotus::T1378,Oceanlotus::T1423,T1378,T1423,2018-04-27,2019-02-01,463,2562,CN_OceanLotus_new_malware.pdf,OceanLotus_KerrDown.pdf
+Oceanlotus,Oceanlotus::T1378,Oceanlotus::T1046,T1378,T1046,2018-04-27,2019-02-01,463,2562,CN_OceanLotus_new_malware.pdf,OceanLotus_KerrDown.pdf
+Oceanlotus,Oceanlotus::T1359,Oceanlotus::T1423,T1359,T1423,2018-04-27,2019-02-01,463,2562,CN_OceanLotus_new_malware.pdf,OceanLotus_KerrDown.pdf
+Oceanlotus,Oceanlotus::T1359,Oceanlotus::T1046,T1359,T1046,2018-04-27,2019-02-01,463,2562,CN_OceanLotus_new_malware.pdf,OceanLotus_KerrDown.pdf
+Turla,Turla::T1362,Turla::T1375,T1362,T1375,2018-05-22,2018-08-21,1634,641,turla-mosquito-shift-towards-generic-tools.pdf,Eset-Turla-Outlook-Backdoor.pdf
+Turla,Turla::T1362,Turla::T1406,T1362,T1406,2018-05-22,2018-08-21,1634,641,turla-mosquito-shift-towards-generic-tools.pdf,Eset-Turla-Outlook-Backdoor.pdf
+Turla,Turla::T1261,Turla::T1375,T1261,T1375,2018-05-22,2018-08-21,1634,641,turla-mosquito-shift-towards-generic-tools.pdf,Eset-Turla-Outlook-Backdoor.pdf
+Turla,Turla::T1261,Turla::T1406,T1261,T1406,2018-05-22,2018-08-21,1634,641,turla-mosquito-shift-towards-generic-tools.pdf,Eset-Turla-Outlook-Backdoor.pdf
+Andariel,Andariel::T1350,Andariel::T1350,T1350,T1350,2018-05-23,2018-06-23,1058,1057,[Report]Andariel_Threat_Group.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Andariel,Andariel::T1350,Andariel::T1358,T1350,T1358,2018-05-23,2018-06-23,1058,1057,[Report]Andariel_Threat_Group.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Andariel,Andariel::T1375,Andariel::T1350,T1375,T1350,2018-05-23,2018-06-23,1058,1057,[Report]Andariel_Threat_Group.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Andariel,Andariel::T1375,Andariel::T1358,T1375,T1358,2018-05-23,2018-06-23,1058,1057,[Report]Andariel_Threat_Group.pdf,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf
+Patchwork,Patchwork::T1389,Patchwork::T1496,T1389,T1496,2018-06-07,2018-08-29,1358,387,patchwork-apt-group-targets-us-think-tanks.pdf,Appendix-TheUrpageConnectiontoBahamutConfuciusandPatchwork.pdf
+Patchwork,Patchwork::T1389,Patchwork::T1438,T1389,T1438,2018-06-07,2018-08-29,1358,387,patchwork-apt-group-targets-us-think-tanks.pdf,Appendix-TheUrpageConnectiontoBahamutConfuciusandPatchwork.pdf
+Patchwork,Patchwork::T1291,Patchwork::T1496,T1291,T1496,2018-06-07,2018-08-29,1358,387,patchwork-apt-group-targets-us-think-tanks.pdf,Appendix-TheUrpageConnectiontoBahamutConfuciusandPatchwork.pdf
+Patchwork,Patchwork::T1291,Patchwork::T1438,T1291,T1438,2018-06-07,2018-08-29,1358,387,patchwork-apt-group-targets-us-think-tanks.pdf,Appendix-TheUrpageConnectiontoBahamutConfuciusandPatchwork.pdf
+Muddywater,Muddywater::T1291,Muddywater::T1406,T1291,T1406,2018-06-14,2018-11-28,1062,802,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf,MuddyWater-Operations-in-Lebanon-and-Oman.pdf
+Muddywater,Muddywater::T1291,Muddywater::T1027,T1291,T1027,2018-06-14,2018-11-28,1062,802,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf,MuddyWater-Operations-in-Lebanon-and-Oman.pdf
+Muddywater,Muddywater::T1354,Muddywater::T1406,T1354,T1406,2018-06-14,2018-11-28,1062,802,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf,MuddyWater-Operations-in-Lebanon-and-Oman.pdf
+Muddywater,Muddywater::T1354,Muddywater::T1027,T1354,T1027,2018-06-14,2018-11-28,1062,802,another-potential-muddywater-campaign-uses-powershell-based-prb-backdoor.pdf,MuddyWater-Operations-in-Lebanon-and-Oman.pdf
+Lazarus,Lazarus::T1350,Lazarus::T1291,T1350,T1291,2018-06-23,2018-11-08,1057,644,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf
+Lazarus,Lazarus::T1350,Lazarus::T1087,T1350,T1087,2018-06-23,2018-11-08,1057,644,[AhnLab]Andariel_a_Subgroup_of_Lazarus (3).pdf,FASTCash How the Lazarus Group is Emptying Millions from ATMs.pdf
