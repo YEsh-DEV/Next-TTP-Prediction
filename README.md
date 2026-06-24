@@ -187,6 +187,7 @@ To visually prove the Actor-Aware graph architecture, we have integrated an auto
    ```cypher
    MATCH p=()-[r:NEXT_TTP]->() RETURN p LIMIT 100
    ```
+![Uploading Screenshot 2026-06-23 061039.png…]()
 
 ---
 <div align="center">
