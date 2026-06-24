@@ -1,3 +1,4 @@
+<img width="1298" height="901" alt="Screenshot 2026-06-23 054454 - Copy" src="https://github.com/user-attachments/assets/e4d0e6c0-658d-4e22-9428-3e3e006faf02" />
 <div align="center">
   
   <img src="https://img.shields.io/badge/Status-Academic_Validation_Passed-success?style=for-the-badge&logo=cachet" alt="Status" />
@@ -187,7 +188,8 @@ To visually prove the Actor-Aware graph architecture, we have integrated an auto
    ```cypher
    MATCH p=()-[r:NEXT_TTP]->() RETURN p LIMIT 100
    ```
-![Uploading Screenshot 2026-06-23 061039.png…]()
+<img width="1918" height="930" alt="Screenshot 2026-06-23 061039" src="https://github.com/user-attachments/assets/0c435fc6-544b-4c74-b1b7-1c6d01839c90" />
+
 
 ---
 <div align="center">
@@ -196,3 +198,4 @@ To visually prove the Actor-Aware graph architecture, we have integrated an auto
   <br>
   <b>Built for Advanced Cyber Threat Intelligence Research</b>
 </div>
+<img width="1298" height="901" alt="Screenshot 2026-06-23 054454 - Copy" src="https://github.com/user-attachments/assets/cc2340cc-42ba-4378-ada0-ee981bb9386c" />
