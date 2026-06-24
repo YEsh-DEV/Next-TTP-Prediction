@@ -1,4 +1,3 @@
-<img width="1298" height="901" alt="Screenshot 2026-06-23 054454 - Copy" src="https://github.com/user-attachments/assets/e4d0e6c0-658d-4e22-9428-3e3e006faf02" />
 <div align="center">
   
   <img src="https://img.shields.io/badge/Status-Academic_Validation_Passed-success?style=for-the-badge&logo=cachet" alt="Status" />
