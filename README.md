@@ -21,10 +21,11 @@
 1. [🌟 Executive Summary](#-executive-summary)
 2. [🛑 The Core Problem: Why Traditional Models Fail](#-the-core-problem-why-traditional-models-fail)
 3. [🧠 Architectural Deep Dive: The 4-Layer Solution](#-architectural-deep-dive-the-4-layer-solution)
-4. [📊 Comprehensive Empirical Evaluation](#-comprehensive-empirical-evaluation)
-5. [💡 Key Advantages & Real-World Impact](#-key-advantages--real-world-impact)
-6. [🚀 Comprehensive Setup & Execution Guide](#-comprehensive-setup--execution-guide)
-7. [🕸️ Neo4j AuraDB Integration](#️-neo4j-auradb-integration)
+4. [🖥️ Interactive Web Dashboard & Threat Intelligence Visualizer](#️-interactive-web-dashboard--threat-intelligence-visualizer)
+5. [📊 Comprehensive Empirical Evaluation](#-comprehensive-empirical-evaluation)
+6. [💡 Key Advantages & Real-World Impact](#-key-advantages--real-world-impact)
+7. [🚀 Comprehensive Setup & Execution Guide](#-comprehensive-setup--execution-guide)
+8. [🕸️ Neo4j AuraDB Integration](#️-neo4j-auradb-integration)
 
 ---
 
@@ -81,13 +82,42 @@ With the temporal graph constructed, we pass the adjacency matrix to the predict
 
 ---
 
+## 🖥️ Interactive Web Dashboard & Threat Intelligence Visualizer
+
+To visualize predictions and audit the reproducibility of the benchmark, we built a production-ready, full-stack interactive web application. 
+
+<div align="center">
+  <img src="figures/dashboard_overview.png" alt="Dashboard Overview" width="1000" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); border: 1px solid #e2e8f0;"/>
+  <p><i>Figure 2: Minimalist Slate-Indigo Dashboard Visualizing Threat Metrics & Prediction Simulator</i></p>
+</div>
+
+### Key Capabilities of the Web Dashboard:
+1. **Interactive Adjacency Network Mapping:**
+   - Visualizes threat transitions as a force-directed physics graph with repelling nodes, spring links, and gravitational forces.
+   - Nodes settle automatically using an **Alpha Cooling** decay system to stop continuous node shaking and remain completely stationary.
+   - Capable of querying the active graph directly from **Neo4j AuraDB** (with a graceful local CSV fallback) and highlights the loaded data source in real-time.
+   - Hovering over a node dims non-adjacent paths (fading them to `0.2` opacity) to isolate threat paths, and double-clicking a node instantly loads its state into the active live prediction simulator.
+   
+   <div align="center">
+     <img src="figures/adjacency_graph.png" alt="Optimized Adjacency Graph" width="1000" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); border: 1px solid #e2e8f0;"/>
+     <p><i>Figure 3: Stabilized Adjacency Graph Map showing Actor-aware transitions</i></p>
+   </div>
+
+2. **Temporal-Causal Live Predictor:**
+   - Choose a threat actor and an initial technique. The model loads the pre-trained weights (`rotate_final.pt`) and performs live tensor rotations in complex space to compute and rank the top 3 most probable subsequent techniques.
+3. **Production Consistency Audit Console:**
+   - Run verification checks against physical file presence, database row counts, PyTorch weight initialization, chronological overlaps, and Neo4j counts.
+   - Streams live audit logs to an interactive terminal emulator console, populating passing cards once validated.
+
+---
+
 ## 📊 Comprehensive Empirical Evaluation
 
 We evaluated our Actor-Aware RotatE model against five industry-standard baselines using a strict **Next-Node Classification** protocol.
 
 <div align="center">
   <img src="figures/readme_results_chart.png" alt="Results Chart" width="900" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4); border: 2px solid #333;"/>
-  <p><i>Figure 2: Next-TTP Prediction Performance Across Architectures</i></p>
+  <p><i>Figure 4: Next-TTP Prediction Performance Across Architectures</i></p>
 </div>
 
 ### 🏆 Final Benchmark Results
@@ -165,6 +195,15 @@ When the CLI launches, you will see three distinct options:
         *   Prompt: `Enter Actor Name:` Type `Turla`. 
         *   Prompt: `Enter Current Technique:` Type `T1213`.
         *   *Result:* Watch the pre-trained complex-space model instantly calculate and rank the top 3 next techniques they are mathematically most likely to use!
+
+### 3️⃣ Running the Interactive Web Dashboard & Visualizer
+We also provide a full-stack dashboard utilizing a FastAPI backend and a React/TypeScript frontend with dynamic physics-graph visuals:
+
+```bash
+# Start both uvicorn backend and vite dev server concurrently
+python run_dashboard.py
+```
+Once initialized, navigate to **`http://localhost:5173/`** in your browser to explore the live threat predictor, interactive adjacency graph visualizer, and consistency audits.
 
 ---
 
