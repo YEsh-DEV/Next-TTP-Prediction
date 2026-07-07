@@ -15,4 +15,5 @@ class CTIEmbedder:
     def embed_texts(self, texts: list[str]) -> list[list[float]]:
         self._initialize()
         embeddings = self.model.encode(texts, batch_size=128, show_progress_bar=False)
-        return embeddings.tolist()
+        return embeddings.tolist()    
+     
