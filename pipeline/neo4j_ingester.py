@@ -19,7 +19,7 @@ class Neo4jIngester:
             
         self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
         
-    def close(self):
+    def close(self):                                                               
         self.driver.close()
         
     def _create_constraints(self):
