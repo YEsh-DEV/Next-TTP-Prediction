@@ -12,7 +12,7 @@ class SubgraphBuilder:
         G.add_node(query, type="Query")
         
         # Add Temporal Events and PRECEDES edges
-        for i in range(len(event_sequence)):
+        for i in range(len(event_sequence)):              
             evt = event_sequence[i]
             G.add_node(evt, type="Event")
             G.add_edge(evt, query, relationship="RETRIEVED_FROM")
