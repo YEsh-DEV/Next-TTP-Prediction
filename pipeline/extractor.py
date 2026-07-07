@@ -130,4 +130,4 @@ class Extractor:
                 event.sequence_number = idx + 1
             result.events = sorted_events
 
-        return result
+        return result      
