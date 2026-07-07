@@ -11,5 +11,6 @@ class PredictionEvaluator:
             "node_count": G.number_of_nodes(),
             "edge_count": G.number_of_edges(),
             "graph_density": round(nx.density(G), 4) if G.number_of_nodes() > 0 else 0.0,
-            "transition_count": total_transitions
+            "transition_count": total_transitions                                                          
+            
         }
