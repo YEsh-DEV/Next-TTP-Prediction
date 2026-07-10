@@ -10,7 +10,8 @@ from schemas.neo4j_schema import APTGroupSchema, SoftwareSchema, TechniqueSchema
 
 load_dotenv()
 
-URI = os.getenv("NEO4J_URI")
+URI = os.getenv("NEO4J_URI")              
+
 USERNAME = os.getenv("NEO4J_USERNAME")
 PASSWORD = os.getenv("NEO4J_PASSWORD")
 
