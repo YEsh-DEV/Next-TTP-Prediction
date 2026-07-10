@@ -6,7 +6,7 @@ from neo4j import GraphDatabase
 from dotenv import load_dotenv
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from schemas.neo4j_schema import APTGroupSchema, SoftwareSchema, TechniqueSchema, TacticSchema
+from schemas.neo4j_schema import APTGroupSchema, SoftwareSchema, TechniqueSchema, TacticSchema 
 
 load_dotenv()
 
