@@ -39,7 +39,7 @@ def build_benchmark(classifier):
     actor_groups = defaultdict(dict)
     for evt in all_events:
         for m in APT_PATTERN.findall(evt.info or ""):
-            actor_groups[m.strip().title()][evt.event_id] = evt
+            actor_groups[m.strip().title()][evt.event_id] = evt   
     timelines = {a: sorted(e.values(), key=lambda x: (get_date(x), x.event_id))
                  for a, e in actor_groups.items() if len(e) > 1}
     cache = {}
